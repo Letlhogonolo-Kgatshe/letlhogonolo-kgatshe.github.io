@@ -1,0 +1,238 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #1a1a1a;
+}
+
+h1, h2, h3 {
+    color: #e0e0e0;
+}
+
+a {
+    color: #0dcff1;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    overflow: hidden;
+}
+
+#about {
+    background-image: url('Letlhogonolo Kgatshe.img.JPG');
+    background-size: cover;
+    background-position: center 50px;
+    background-attachment: fixed;
+    padding: 199px 20px;
+    min-height: 400px;
+    color:  #0dcff1;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Ensure the container fills the header height */
+
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid #0dcff1;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #0dcff1;
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to take remaining space */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #e0e0e0;
+}
+
+/* Sections */
+section {
+    padding: 100px 0 50px 0;
+    margin-top: 70px;
+    background-color: #1a1a1a;
+}
+
+section:nth-of-type(even) {
+    background-color: #121212;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color:  #0dcff1;
+}
+
+section p, section ul {
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.education-item, .certificate-item, .skill-category {
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-category {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.skill-category ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left;
+    color: #d0d0d0;
+}
+
+/* Resume Section */
+#resume .resume-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #0dcff1;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #0077cc; /* Change color on hover */
+}
+
+/* Contact Section */
+#contact a {
+    color: #0dcff1;
+}
+
+#contact a:hover, #contact a:focus {
+    color: #0dcff1;
+}
+
+/* Footer */
+footer {
+    background-color: #0d0d0d;
+    color: #757575;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the navigation by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Position below the header */
+        left: 0;
+        width: 100%;
+        background-color: #0d0d0d;
+        transition: left 0.3s ease;
+    }
+
+    nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    nav ul li {
+        margin: 15px 0; /* Vertical spacing for mobile */
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    /* Adjust header height for smaller screens */
+    header {
+        height: auto; /* Allow for flexible height */
+        padding: 10px 0; /* Add some padding */
+    }
+
+    section {
+        padding: 80px 20px 40px 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-category {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+}
