@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Letlhogonolo Kgatshe, a Computer Science student specializing in Java, C#, and Azure development.">
-    <meta name="keywords" content="Letlhogonolo Kgatshe, portfolio, computer science, Java, C#, Azure, web development">
-    <meta name="author" content="Letlhogonolo Kgatshe">
     <title>Letlhogonolo Kgatshe - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4C+X6FfnJmE6tE62D3GZoKcD5nHct6bUyBrT3p5N+0h5iFwV0QhH6Tt4HcGlwSZk+wTjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -22,86 +18,118 @@
                 <h1>Letlhogonolo Kgatshe</h1>
             </div>
             <nav>
-                <ul id="nav-links" role="navigation">
-                    <li><a href="#hero" aria-label="Home">Home</a></li>
-                    <li><a href="#about" aria-label="About Me">About</a></li>
-                    <li><a href="#projects" aria-label="Projects">Projects</a></li>
-                    <li><a href="#skills" aria-label="Skills">Skills</a></li>
-                    <li><a href="#work-experience" aria-label="Work Experience">Experience</a></li>
-                    <li><a href="#education" aria-label="Education">Education</a></li>
-                    <li><a href="#certificates" aria-label="Certificates">Certificates</a></li>
-                    <li><a href="#contact" aria-label="Contact">Contact</a></li>
+                <ul id="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#work-experience">Work Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <div class="hamburger" id="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
             </nav>
-            <button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
         </div>
     </header>
-
-    <section id="hero">
-        <div class="container">
-            <h1>Hello, I'm Letlhogonolo</h1>
-            <p class="tagline">Aspiring Developer Crafting Innovative Solutions</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="Letlhogonolo Kgatshe CV.pdf" download class="btn btn-secondary">Download Resume</a>
-            </div>
-        </div>
-    </section>
 
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>I'm a passionate Computer Science student at Varsity College, Cape Town, with a drive to innovate in the tech industry. Proficient in Java, C#, Azure, and web development, I thrive on solving complex problems through code. My projects, ranging from e-commerce platforms to cybersecurity chatbots, reflect my commitment to creating impactful solutions. Beyond coding, I mentor peers, explore emerging tech trends, and enjoy calisthenics and chess.</p>
+            <p>Enthusiastic and adaptable Computer Science student eager to contribute and leave his mark on the technology industry. Proficient in Java, C#, Azure, GitHub, and Microsoft Office Suite. Actively engaged in coursework and personal projects to develop practical skills. Possesses strong problem-solving abilities, a keen interest in emerging technologies, and a history of creation/innovation.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science: Computer Science in Application Development</h3>
+                <p>Varsity College - Cape Town<br>2024 – 2026</p>
+            </div>
+            <div class="education-item">
+                <h3>National Senior Certificate</h3>
+                <p>Fields College - Rustenburg<br>2022</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <div class="container">
+            <h2>Certificates & Courses</h2>
+            <div class="certificate-item">
+                <h3>Try Hack Me (2024)</h3>
+                <ul>
+                    <li>Intro to Cyber Security</li>
+                    <li>Web Fundamentals</li>
+                    <li>Burp Suite</li>
+                </ul>
+            </div>
+            <div class="certificate-item">
+                <h3>AWS (2024)</h3>
+                <ul>
+                    <li>Getting Started with DevOps on AWS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="work-experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="work-item">
+                <h3>Career Centre Volunteer</h3>
+                <p>February 2024 - Present</p>
+            </div>
+            <div class="work-item">
+                <h3>Grit3sixT Mentorship</h3>
+                <p>February 2025 – Present</p>
+            </div>
         </div>
     </section>
 
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
-            <div class="featured-projects">
-                <div class="project-card">
-                    <img src="ecommerce-placeholder.jpg" alt="E-commerce Platform" loading="lazy">
-                    <h3>E-commerce Platform</h3>
-                    <p>A full-stack platform for ordering and receiving packages, deployed on Azure.</p>
-                    <p><strong>Technologies:</strong> C#, SQL, HTML, CSS, JavaScript, Azure</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/E-commerce-platform.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-                <div class="project-card">
-                    <img src="chatbot-placeholder.jpg" alt="Cybersecurity ChatBot" loading="lazy">
-                    <h3>Cybersecurity ChatBot</h3>
-                    <p>A chatbot answering cybersecurity queries, built with C# and Azure.</p>
-                    <p><strong>Technologies:</strong> C#, SQL, HTML, CSS, JavaScript, Azure</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/ChatBot.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website showcasing my skills, projects, and experience.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                <a href="https://letlhogonolo-kgatshe.github.io/Letlhogonolo.github.io/" target="_blank">View Project</a>
             </div>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Portfolio Website</h3>
-                    <p>A responsive portfolio showcasing my skills and projects.</p>
-                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                    <a href="https://letlhogonolo-kgatshe.github.io/Letlhogonolo.github.io/" target="_blank" class="btn btn-primary">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Snake Game</h3>
-                    <p>A classic Snake game built with Java and JFrame.</p>
-                    <p><strong>Technologies:</strong> Java, JFrame</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/SnakeGame.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-                <div class="project-card">
-                    <h3>Student Registration System</h3>
-                    <p>A Java application for managing student registrations.</p>
-                    <p><strong>Technologies:</strong> Java</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/Student-registry.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-                <div class="project-card">
-                    <h3>Quiz App</h3>
-                    <p>A Java-based quiz game with dynamic questions.</p>
-                    <p><strong>Technologies:</strong> Java</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/Quiz-App.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
+            <div class="project">
+                <h3>Snake Game</h3>
+                <p>A Java Snake Game application using JFrame.</p>
+                <p><strong>Technologies:</strong> Java, JFrame</p>
+                <a href="https://github.com/Letlhogonolo-Kgatshe/SnakeGame.git" target="_blank">View Code</a>
+            </div>
+            <div class="project">
+                <h3>Student Registration System</h3>
+                <p>A Java program that manages student registrations, including adding and removing students.</p>
+                <p><strong>Technologies:</strong> Java</p>
+                <a href="https://github.com/Letlhogonolo-Kgatshe/Student-registry.git" target="_blank">View Code</a>
+            </div>
+            <div class="project">
+                <h3>Quiz App</h3>
+                <p>A Java application that simulates a quiz game with dynamically generated questions.</p>
+                <p><strong>Technologies:</strong> Java</p>
+                <a href="https://github.com/Letlhogonolo-Kgatshe/Quiz-App.git" target="_blank">View Code</a>
+            </div>
+            <div class="project">
+                <h3>E-commerce Platform</h3>
+                <p>An e-commerce platform for ordering and receiving packages, launched on Azure.</p>
+                <p><strong>Technologies:</strong> C#, SQL, HTML, CSS, JavaScript, Microsoft Azure</p>
+                <a href="https://github.com/Letlhogonolo-Kgatshe/E-commerce-platform.git" target="_blank">View Code</a>
+            </div>
+            <div class="project">
+                <h3>ChatBot</h3>
+                <p>A ChatBot using C# for answoring CyberSecurity</p>
+                <p><strong>Technologies:</strong> C#, SQL, HTML, CSS, JavaScript, Microsoft Azure</p>
+                <a href="https://github.com/Letlhogonolo-Kgatshe/ChatBot.git" target="_blank">View Code</a>
             </div>
         </div>
     </section>
@@ -109,381 +137,135 @@
     <section id="skills">
         <div class="container">
             <h2>Skills</h2>
-            <div class="skills-grid">
+            <div class="skills-container">
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
-                    <div class="skill"><span>Java</span><div class="progress-bar" style="width: 85%"></div></div>
-                    <div class="skill"><span>C#</span><div class="progress-bar" style="width: 80%"></div></div>
+                    <ul>
+                        <li>Java</li>
+                        <li>C#</li>
+                    </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Web Development</h3>
-                    <div class="skill"><span>HTML</span><div class="progress-bar" style="width: 90%"></div></div>
-                    <div class="skill"><span>CSS</span><div class="progress-bar" style="width: 85%"></div></div>
-                    <div class="skill"><span>JavaScript</span><div class="progress-bar" style="width: 75%"></div></div>
-                    <div class="skill"><span>SQL</span><div class="progress-bar" style="width: 70%"></div></div>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
                 </div>
-                <8968-4d37-9f42-9b6e76e7b6d3" title="styles.css" contentType="text/css">
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+                <div class="skill-category">
+                    <h3>Version Control & Cloud</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Microsoft Azure</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>JUnit Testing</li>
+                        <li>Microsoft Office Suite</li>
+                        <li>Visual Studio Code</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Tutoring (Assisting in programming queries)</li>
+                        <li>Communication (Public Speaking)</li>
+                        <li>Mentor (1st Year Mentor)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <style>
+            #skills ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            #skills li {
+                background-color: #f0f0f009;
+                margin: 5px 0;
+                padding: 10px;
+                border-radius: 5px;
+            }
+        </style>
+    </section>
 
-/* Typography */
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #e5e7eb;
-    background-color: #1f2937;
-}
+    <section id="languages">
+        <div class="container">
+            <h2>Languages</h2>
+            <ul>
+                <li>Setswana: Native Speaker</li>
+                <li>English: First Language</li>
+                <li>Afrikaans: Proficient</li>
+                <li>Spanish: Beginner (A1)</li>
+            </ul>
+        </div>
+    </section>
 
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-}
+    <section id="hobbies">
+        <div class="container">
+            <h2>Hobbies and Interests</h2>
+            <ul>
+                <li>Exploring the history of technology</li>
+                <li>Engaging with emerging tech trends</li>
+                <li>Coding projects</li>
+                <li>Psychology and philosophy</li>
+                <li>Calisthenics and fitness</li>
+                <li>Hockey</li>
+                <li>Chess</li>
+            </ul>
+        </div>
+    </section>
 
-a {
-    color: #06b6d4;
-    text-decoration: none;
-}
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <p>You can view or download my resume below:</p>
+            <div class="resume-buttons">
+                <a href="Letlhogonolo Kgatshe CV.pdf" target="_blank" class="btn">View Resume</a>
+                <a href="Letlhogonolo Kgatshe CV.pdf" download="Letlhogonolo Kgatshe CV.pdf" class="btn">Download Resume</a>
+            </div>
+        </div>
+    </section>
 
-a:hover, a:focus {
-    text-decoration: underline;
-}
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p><strong>Location:</strong> Cape Town, 7708</p>
+            <p><strong>Phone:</strong> <a href="tel:+27664207144">+27 66 420 7144</a></p>
+            <p><strong>Email:</strong> <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/letlhogonolo-kgatshe-69aa2a2b7/" target="_blank">Letlhogonolo Kgatshe</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Letlhogonolo-Kgatshe" target="_blank">github.com/Letlhogonolo-Kgatshe</a></p>
+            <p><strong>Portfolio:</strong> <a href="https://letlhogonolo-kgatshe.github.io/Letlhogonolo.github.io/" target="_blank">letlhogonolo-kgatshe.github.io</a></p>
+        </div>
+    </section>
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 0;
-}
+    <section id="contact-form" style="background-color: #333; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 500px; margin: auto;">
+        <h2 style="text-align: center; color: #fff;">Contact Me</h2>
+        <form action="mailto:Tlhogikgatshe@gmail.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 15px;">
+            <label for="name" style="font-weight: bold; color: #fff;">Name:</label>
+            <input type="text" id="name" name="name" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            
+            <label for="email" style="font-weight: bold; color: #fff;">Email:</label>
+            <input type="email" id="email" name="email" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            
+            <label for="message" style="font-weight: bold; color: #fff;">Message:</label>
+            <textarea id="message" name="message" rows="4" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+            
+            <input type="submit" value="Send" style="padding: 10px; border-radius: 5px; background-color: #007bff; color: white; border: none; cursor: pointer;">
+        </form>
+    </section>
 
-/* Header */
-header {
-    background-color: #111827;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    <footer>
+        <div class="container">
+            <p>© 2025 Letlhogonolo Kgatshe. All rights reserved.</p>
+        </div>
+    </footer>
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-}
-
-.profile-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-    object-fit: cover;
-    border: 2px solid #06b6d4;
-}
-
-header h1 {
-    font-size: 1.5rem;
-    color: #06b6d4;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    font-size: 1rem;
-    color: #e5e7eb;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover, nav ul li a:focus {
-    color: #06b6d4;
-}
-
-.hamburger {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #e5e7eb;
-}
-
-#theme-toggle {
-    background: none;
-    border: none;
-    color: #e5e7eb;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-/* Hero Section */
-#hero {
-    background: linear-gradient(135deg, #1f2937, #111827);
-    text-align: center;
-    padding: 100px 20px;
-}
-
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.tagline {
-    font-size: 1.5rem;
-    color: #d1d5db;
-    margin-bottom: 20px;
-}
-
-.cta-buttons .btn {
-    margin: 10px;
-}
-
-/* Sections */
-section {
-    padding: 80px 0;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #06b6d4;
-}
-
-/* About */
-#about p {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-/* Projects */
-.featured-projects, .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.project-card {
-    background: #111827;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    color: #d1d5db;
-    margin-bottom: 10px;
-}
-
-/* Skills */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.skill-category h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.skill {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.progress-bar {
-    height: 10px;
-    background: #06b6d4;
-    border-radius: 5px;
-}
-
-/* Education, Work Experience, Certificates */
-.education-item, .work-item, .certificate-item {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    text-align: left;
-}
-
-.education-item h3, .work-item h3, .certificate-item h3 {
-    color: #06b6d4;
-}
-
-/* Testimonials */
-.testimonial {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    text-align: center;
-    font-style: italic;
-    color: #d1d5db;
-}
-
-.testimonial p {
-    margin-bottom: 10px;
-}
-
-/* Contact */
-#contact .contact-info {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#contact .contact-info p {
-    margin-bottom: 10px;
-}
-
-/* Contact Form */
-#contact-form {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #111827;
-    border-radius: 10px;
-}
-
-#contact-form h2 {
-    color: #ffffff;
-}
-
-#contact-form label {
-    color: #e5e7eb;
-    font-weight: 600;
-}
-
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #4b5563;
-    border-radius: 5px;
-    background: #1f2937;
-    color: #e5e7eb;
-}
-
-#contact-form input[type="submit"] {
-    background: #06b6d4;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#contact-form input[type="submit"]:hover {
-    background: #0891b2;
-}
-
-/* Footer */
-footer {
-    background: #111827;
-    text-align: center;
-    padding: 20px 0;
-    color: #9ca3af;
-}
-
-/* Back to Top */
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #06b6d4;
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-/* Light Theme */
-body.light-theme {
-    background: #f3f4f6;
-    color: #1f2937;
-}
-
-body.light-theme h1, body.light-theme h2, body.light-theme h3 {
-    color: #111827;
-}
-
-body.light-theme a {
-    color: #0284c7;
-}
-
-body.light-theme header {
-    background: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-body.light-theme .project-card, body.light-theme #contact-form {
-    background: #ffffff;
-}
-
-body.light-theme .progress-bar {
-    background: #0284c7;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #111827;
-        padding: 20px;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-
-    .tagline {
-        font-size: 1.2rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>
