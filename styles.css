@@ -1,4 +1,5 @@
 /* Reset CSS */
+  */
 * {
     margin: 0;
     padding: 0;
@@ -46,22 +47,11 @@ header {
     overflow: hidden;
 }
 
-#about {
-    background-image: url('Letlhogonolo Kgatshe.img.JPG');
-    background-size: cover;
-    background-position: center 50px;
-    background-attachment: fixed;
-    padding: 199px 20px;
-    min-height: 400px;
-    color:  #0dcff1;
-}
-
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%; /* Ensure the container fills the header height */
-
+    height: 100%;
 }
 
 .header-left {
@@ -84,7 +74,7 @@ header h1 {
 }
 
 nav {
-    flex-grow: 1; /* Allow nav to take remaining space */
+    flex-grow: 1;
 }
 
 nav ul {
@@ -117,7 +107,7 @@ section:nth-of-type(even) {
 section h2 {
     margin-bottom: 20px;
     text-align: center;
-    color:  #0dcff1;
+    color: #0dcff1;
 }
 
 section p, section ul {
@@ -127,10 +117,41 @@ section p, section ul {
     color: #f0f0f0;
 }
 
-.education-item, .certificate-item, .skill-category {
-    margin-bottom: 20px;
+/* About Section */
+#about {
+    background-color: #121212;
+    padding: 100px 20px;
+    min-height: 400px;
+    color: #f0f0f0;
 }
 
+/* Education, Certificates, Work Experience */
+.education-item, .certificate-item, .work-item {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work-item h3, .education-item h3, .certificate-item h3 {
+    color: #0dcff1;
+}
+
+/* Projects */
+.project {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project h3 {
+    color: #0dcff1;
+}
+
+/* Skills */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -169,7 +190,7 @@ section p, section ul {
 }
 
 .btn:hover, .btn:focus {
-    background-color: #0077cc; /* Change color on hover */
+    background-color: #0077cc;
 }
 
 /* Contact Section */
@@ -179,6 +200,28 @@ section p, section ul {
 
 #contact a:hover, #contact a:focus {
     color: #0dcff1;
+}
+
+/* Contact Form */
+#contact-form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#contact-form h2 {
+    color: #fff;
+}
+
+#contact-form label {
+    color: #fff;
+}
+
+#contact-form input, #contact-form textarea {
+    border: 1px solid #ccc;
 }
 
 /* Footer */
@@ -192,10 +235,10 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Hide the navigation by default on mobile */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Position below the header */
+        top: 70px;
         left: 0;
         width: 100%;
         background-color: #0d0d0d;
@@ -203,22 +246,21 @@ footer {
     }
 
     nav ul.active {
-        display: flex; /* Show when active */
+        display: flex;
     }
 
     nav ul li {
-        margin: 15px 0; /* Vertical spacing for mobile */
+        margin: 15px 0;
         text-align: center;
     }
 
     .hamburger {
-        display: block; /* Show hamburger on mobile */
+        display: block;
     }
 
-    /* Adjust header height for smaller screens */
     header {
-        height: auto; /* Allow for flexible height */
-        padding: 10px 0; /* Add some padding */
+        height: auto;
+        padding: 10px 0;
     }
 
     section {
