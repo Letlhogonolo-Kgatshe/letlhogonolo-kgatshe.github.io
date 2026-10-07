@@ -1,26 +1,27 @@
-# Letlhogonolo Kgatshe — Portfolio
+# Letlhogonolo Kgatshe: Portfolio
 
-Personal portfolio for Letlhogonolo Kgatshe, a final-year Computer Science student in Cape Town focused on data analytics.
+Personal portfolio of **Letlhogonolo Kgatshe**, a final-year Computer Science student in Cape Town and aspiring data analyst.
 
-**Live site:** https://letlhogonolo-kgatshe.github.io/Letlhogonolo.github.io/
+**Live:** https://letlhogonolo-kgatshe.github.io/
 
-## Sections
-- **About:** background and why data analytics
-- **Skills:** data and databases, programming, cloud, security, tools
-- **Academic record:** an interactive bar chart of module marks, filterable by year
-- **Projects:** SAFE (FinTech hackathon), Event Booking (.NET MVC + Azure), E-commerce, ChatBot, Student Registry, Quiz App and Snake Game
-- **Experience:** tutoring, mentoring and career centre work
-- **Contact**
+## What's on it
+
+- **Selected projects:** Smart-X (IoT data ingestion and anomaly detection) and SAFE (a FinTech hackathon entry) as featured case studies, plus GLMS, Penny Wise, ABC Retail, Cyber Aware Chatbot and two freelance websites. Each links to its source and demo.
+- **Skills** grouped by use, with data and databases first.
+- **Experience:** tutoring (40 students a week across 6 modules), mentoring and career centre work.
+- **Academic record:** averages per year, with an expandable chart of every module mark.
 
 ## Tech
-Plain HTML, CSS and JavaScript with no build step. It supports light and dark mode, works on phones and is hosted on GitHub Pages.
+
+Plain HTML, CSS and JavaScript with no build step or framework. Space Grotesk and Inter fonts. It supports light and dark mode, adapts to phones, respects reduced motion, includes a skip link and a custom 404 page, and is hosted on GitHub Pages.
 
 ## Run locally
-Open `index.html` in a browser, or serve the folder:
 
 ```bash
 npx http-server .
 ```
 
-## Updating module marks
-Marks are stored in the `modules` array in `script.js`. Add a row and the chart and summary update automatically.
+## Updating
+
+- **Module marks:** edit the `modules` array in `script.js`. The yearly cards and the chart are generated from it.
+- **Projects:** add an `<article class="card">` in `index.html` and put its screenshot in `img/projects/`.
