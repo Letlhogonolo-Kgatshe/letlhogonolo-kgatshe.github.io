@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Aware Chatbot: Teaching cybersecurity through conversation | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: Cyber Aware Chatbot, Teaching cybersecurity through conversation. Most people learn about phishing and weak passwords only after something goes wrong.">
+  <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/cyber-aware-chatbot.html">
+  <meta property="og:title" content="Cyber Aware Chatbot: Teaching cybersecurity through conversation">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/profile.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
+      <nav class="nav-links nav-links-case">
+        <a href="../index.html#projects">← Projects</a>
+        <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case">
+    <p class="kicker case-kicker">2025 · Solo developer · PROG6221 (Programming 2A)</p>
+    <h1>Cyber Aware Chatbot<span class="case-sub">Teaching cybersecurity through conversation</span></h1>
+    <div class="case-links"><a href="https://github.com/Letlhogonolo-Kgatshe/cyber-aware-chatbot" target="_blank" rel="noopener" class="btn">Code ↗</a></div>
+    <ul class="tags case-tags"><li>C#</li><li>WPF</li><li>MVVM</li><li>.NET 8</li><li>xUnit</li><li>Newtonsoft.Json</li></ul>
+
+    <div class="case-metrics"><div class="stat"><span class="stat-value">23</span><span class="stat-label">passing xUnit tests in CI</span></div><div class="stat"><span class="stat-value">12+</span><span class="stat-label">security topics with synonyms</span></div><div class="stat"><span class="stat-value">3</span><span class="stat-label">themes: light, dark, blue</span></div></div>
+
+    
+
+    <section class="case-section"><h2>The problem</h2><p>Most people learn about phishing and weak passwords only after something goes wrong. The goal was a friendly desktop app that teaches security through conversation, quizzes and small tasks.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>A conversational engine that maps questions and synonyms (&quot;2fa&quot;, &quot;virus&quot;) to topics, with deeper answers when you type &quot;more&quot;.</li><li>Sentiment-aware replies, guided password and phishing tutorials, a quiz with points, and a security to-do list with reminders.</li><li>An activity log and saved progress (JSON), in a WPF MVVM interface.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="card case-decision"><h3>Tests found a real bug</h3><p>Greeting detection used Contains(&quot;hi&quot;), so &quot;What is phishing?&quot; (p-hi-shing) got &quot;Hi there!&quot; instead of an answer. It now uses whole-word matching, with regression tests.</p></div><div class="card case-decision"><h3>Fixed the build</h3><p>The greeting audio file was declared twice, which broke the build, and was embedded where the code expected a file on disk. Both are fixed.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>23 tests run on Windows CI on every push.</li><li>Grew from a console chatbot (Part 1) into a full WPF app (Part 3).</li></ul></section>
+
+    <nav class="case-pager" aria-label="More projects">
+      <a href="abc-retail.html" class="card"><span class="kicker">← Previous</span><strong>ABC Retail</strong></a>
+      <a href="smartx.html" class="card case-pager-next"><span class="kicker">Next →</span><strong>Smart-X</strong></a>
+    </nav>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Letlhogonolo Kgatshe</span>
+    <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
+  </footer>
+</body>
+</html>

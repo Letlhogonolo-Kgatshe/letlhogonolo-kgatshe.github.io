@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penny Wise: Android budgeting app | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: Penny Wise, Android budgeting app. Most people abandon budgeting apps within weeks.">
+  <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/penny-wise.html">
+  <meta property="og:title" content="Penny Wise: Android budgeting app">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/img/projects/penny-wise-logo.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
+      <nav class="nav-links nav-links-case">
+        <a href="../index.html#projects">← Projects</a>
+        <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case">
+    <p class="kicker case-kicker">2026 · Developer · PROG7313 (Programming 3C)</p>
+    <h1>Penny Wise<span class="case-sub">Android budgeting app</span></h1>
+    <div class="case-links"><a href="https://github.com/Letlhogonolo-Kgatshe/penny-wise-budget-app" target="_blank" rel="noopener" class="btn">Code ↗</a><a href="https://youtu.be/w4Cir029GtA" target="_blank" rel="noopener" class="btn btn-ghost">Video demo ↗</a></div>
+    <ul class="tags case-tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>Coroutines &amp; Flow</li><li>JUnit</li></ul>
+
+    <div class="case-metrics"><div class="stat"><span class="stat-value">5</span><span class="stat-label">core screens</span></div><div class="stat"><span class="stat-value">7</span><span class="stat-label">achievement badges</span></div><div class="stat"><span class="stat-value">9</span><span class="stat-label">unit tests in CI</span></div></div>
+
+    <figure class="case-figure case-figure-contain"><img src="../img/projects/penny-wise-logo.jpg" alt="Penny Wise app logo" width="800" height="500"></figure>
+
+    <section class="case-section"><h2>The problem</h2><p>Most people abandon budgeting apps within weeks. Penny Wise makes tracking expenses against monthly goals visual and rewarding, so logging spending becomes a habit.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>Home, Add expense, Totals, Goals and History screens in Jetpack Compose (Material 3, dark theme).</li><li>Per-user data in Cloud Firestore, exposed as Kotlin Flows so every screen updates live.</li><li>Spending charts by category, min/max monthly goals, receipt photos, and gamification with XP and badges.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="card case-decision"><h3>MVVM + repository</h3><p>One repository is the single source of truth, and Firestore snapshot listeners are wrapped in callbackFlow.</p></div><div class="card case-decision"><h3>Testable rules</h3><p>XP, badge and spending-status rules live in pure Kotlin functions, so they are tested on the JVM without Android or Firebase.</p></div><div class="card case-decision"><h3>Secrets stay out of git</h3><p>CI builds with a placeholder Firebase config, and the real google-services.json is never committed.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>Found and fixed a real bug. XP and the Streak badge were counted from the 5 most recent expenses, so XP stopped at 50 and Streak could never unlock.</li><li>CI runs the unit tests and builds a debug APK on every push.</li><li>Corrected outdated docs that described a local database and a stored password.</li></ul></section>
+
+    <nav class="case-pager" aria-label="More projects">
+      <a href="glms.html" class="card"><span class="kicker">← Previous</span><strong>GLMS</strong></a>
+      <a href="abc-retail.html" class="card case-pager-next"><span class="kicker">Next →</span><strong>ABC Retail</strong></a>
+    </nav>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Letlhogonolo Kgatshe</span>
+    <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
+  </footer>
+</body>
+</html>

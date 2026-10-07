@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLMS: Logistics contract management | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: GLMS, Logistics contract management. A logistics company manages contracts and service requests for international clients.">
+  <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/glms.html">
+  <meta property="og:title" content="GLMS: Logistics contract management">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/img/projects/glms.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
+      <nav class="nav-links nav-links-case">
+        <a href="../index.html#projects">← Projects</a>
+        <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case">
+    <p class="kicker case-kicker">2026 · Solo developer · PROG7311 (Enterprise Application Development)</p>
+    <h1>GLMS<span class="case-sub">Logistics contract management</span></h1>
+    <div class="case-links"><a href="https://github.com/Letlhogonolo-Kgatshe/glms-contract-management" target="_blank" rel="noopener" class="btn">Code ↗</a><a href="https://youtu.be/TWxagCLS1yQ" target="_blank" rel="noopener" class="btn btn-ghost">Video demo ↗</a></div>
+    <ul class="tags case-tags"><li>ASP.NET Core (.NET 10) Web API</li><li>Blazor Server</li><li>Entity Framework Core</li><li>SQL Server</li><li>Swagger</li><li>xUnit &amp; Moq</li></ul>
+
+    <div class="case-metrics"><div class="stat"><span class="stat-value">59</span><span class="stat-label">passing xUnit tests in CI</span></div><div class="stat"><span class="stat-value">3</span><span class="stat-label">Gang-of-Four patterns</span></div><div class="stat"><span class="stat-value">2</span><span class="stat-label">tiers: REST API + Blazor UI</span></div></div>
+
+    <figure class="case-figure"><img src="../img/projects/glms.jpg" alt="GLMS dashboard with contract counts by status" width="800" height="500"></figure>
+
+    <section class="case-section"><h2>The problem</h2><p>A logistics company manages contracts and service requests for international clients. Service requests must never be raised against an inactive or expired contract, every status change must be auditable, and signed agreements need to be stored safely.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>A REST API (EF Core, SQL Server, Swagger) for clients, contracts, service requests and the audit log.</li><li>A Blazor Server frontend: dashboard, contract hub with date and status filters, PDF uploads, and service requests with a live USD → ZAR conversion.</li><li>A 59-test xUnit suite covering the patterns, validation, currency maths, file checks and an end-to-end workflow on an in-memory database.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="card case-decision"><h3>Factory</h3><p>Creates contracts in the correct initial state (Draft or Active), and rejects end dates on or before the start date.</p></div><div class="card case-decision"><h3>Observer</h3><p>Every contract status change notifies an observer that writes to the audit log, so auditing can't be forgotten.</p></div><div class="card case-decision"><h3>Strategy</h3><p>Composable validation strategies (active status + valid dates) block invalid service requests before they reach the database.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>59 tests run on every push through GitHub Actions.</li><li>Only genuine .pdf uploads are accepted, with .exe, .php, double extensions and similar rejected.</li><li>A seeded demo database makes the system easy to evaluate.</li></ul></section>
+
+    <nav class="case-pager" aria-label="More projects">
+      <a href="entice-feed.html" class="card"><span class="kicker">← Previous</span><strong>Entice Feed</strong></a>
+      <a href="penny-wise.html" class="card case-pager-next"><span class="kicker">Next →</span><strong>Penny Wise</strong></a>
+    </nav>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Letlhogonolo Kgatshe</span>
+    <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
+  </footer>
+</body>
+</html>

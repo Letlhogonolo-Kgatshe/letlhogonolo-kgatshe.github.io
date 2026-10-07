@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Retail: Cloud e-commerce on Azure | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: ABC Retail, Cloud e-commerce on Azure. A retail store needs customers, products, orders, images, contracts and transactions stored reliably in the cloud, with each type of data in the service that suits it, and it must keep working if a cloud function is unavailable..">
+  <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/abc-retail.html">
+  <meta property="og:title" content="ABC Retail: Cloud e-commerce on Azure">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/profile.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
+      <nav class="nav-links nav-links-case">
+        <a href="../index.html#projects">← Projects</a>
+        <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case">
+    <p class="kicker case-kicker">2025 · Solo developer · CLDV6212 (Cloud Development B, 93%)</p>
+    <h1>ABC Retail<span class="case-sub">Cloud e-commerce on Azure</span></h1>
+    <div class="case-links"><a href="https://github.com/Letlhogonolo-Kgatshe/abc-retail-azure" target="_blank" rel="noopener" class="btn">Code ↗</a></div>
+    <ul class="tags case-tags"><li>.NET 8 MVC</li><li>Azure Table, Blob, Queue &amp; File Storage</li><li>Azure Functions v4</li><li>ASP.NET Core Identity</li><li>SQL Server</li></ul>
+
+    <div class="case-metrics"><div class="stat"><span class="stat-value">4</span><span class="stat-label">Azure storage services</span></div><div class="stat"><span class="stat-value">4</span><span class="stat-label">Azure Functions</span></div><div class="stat"><span class="stat-value">93%</span><span class="stat-label">final module mark</span></div></div>
+
+    
+
+    <section class="case-section"><h2>The problem</h2><p>A retail store needs customers, products, orders, images, contracts and transactions stored reliably in the cloud, with each type of data in the service that suits it, and it must keep working if a cloud function is unavailable.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>Customers, products, orders and carts in Table Storage; product images in Blob Storage behind 60-minute SAS URLs; contracts in an Azure File Share; transactions in Queue Storage.</li><li>Four HTTP-triggered Azure Functions for storage writes, with a fallback to direct SDK calls if a function fails.</li><li>SQL Server Identity with Admin and Customer roles, a cart with a live badge, and an admin order workflow.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="card case-decision"><h3>Right store for each data type</h3><p>Structured records go to tables, binary files to blobs, documents to file shares and events to queues.</p></div><div class="card case-decision"><h3>Resilience</h3><p>Orders are always saved, through the function if possible and directly if not, and the user sees a clear warning.</p></div><div class="card case-decision"><h3>Security hygiene</h3><p>Before publishing, real storage keys, SQL passwords and publish profiles were removed from the code and replaced with local-emulator settings.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>Final module mark of 93%.</li><li>Runs locally against the Azurite emulator, with no Azure account needed to evaluate it.</li></ul></section>
+
+    <nav class="case-pager" aria-label="More projects">
+      <a href="penny-wise.html" class="card"><span class="kicker">← Previous</span><strong>Penny Wise</strong></a>
+      <a href="cyber-aware-chatbot.html" class="card case-pager-next"><span class="kicker">Next →</span><strong>Cyber Aware Chatbot</strong></a>
+    </nav>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Letlhogonolo Kgatshe</span>
+    <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAFE: South African Financial Education | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: SAFE, South African Financial Education. When I started learning about money, the useful resources were scattered across dozens of sites and channels, full of jargon and often written for other countries.">
+  <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/safe.html">
+  <meta property="og:title" content="SAFE: South African Financial Education">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/img/projects/safe.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
+      <nav class="nav-links nav-links-case">
+        <a href="../index.html#projects">← Projects</a>
+        <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case">
+    <p class="kicker case-kicker">2025–2026 · Solo entry (Team Arctic) · SA Intervarsity Hackathon 2025</p>
+    <h1>SAFE<span class="case-sub">South African Financial Education</span></h1>
+    <div class="case-links"><a href="https://letlhogonolo-kgatshe.github.io/SAFE/" target="_blank" rel="noopener" class="btn">Live site ↗</a><a href="https://github.com/Letlhogonolo-Kgatshe/SAFE" target="_blank" rel="noopener" class="btn btn-ghost">Code ↗</a></div>
+    <ul class="tags case-tags"><li>JavaScript</li><li>Tailwind CSS</li><li>Chart.js</li><li>GitHub Pages &amp; Actions</li></ul>
+
+    <div class="case-metrics"><div class="stat"><span class="stat-value">88</span><span class="stat-label">glossary terms with rand examples</span></div><div class="stat"><span class="stat-value">8</span><span class="stat-label">money calculators</span></div><div class="stat"><span class="stat-value">47</span><span class="stat-label">curated SA &amp; global resources</span></div></div>
+
+    <figure class="case-figure"><img src="../img/projects/safe.jpg" alt="SAFE homepage: Money conversations, made simple" width="800" height="500"></figure>
+
+    <section class="case-section"><h2>The problem</h2><p>When I started learning about money, the useful resources were scattered across dozens of sites and channels, full of jargon and often written for other countries. Beginners in South Africa need one trustworthy place that explains the basics in plain language, using local rules and rand amounts.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>A 12-step learning path from first budget to first investment, with progress saved on the visitor's device.</li><li>A searchable glossary of 88 South African terms (TFSA, two-pot retirement, transfer duty, debt review…) with rand examples, saved terms and a flashcard quiz.</li><li>Eight calculators: budget (50/30/20), debt payoff (snowball vs avalanche), savings goal, net worth, investment growth, loan &amp; bond, property costs and a live currency converter.</li><li>A risk-free stock market game, plus a curated library of SA creators described in their own words.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="card case-decision"><h3>Correctness over looks</h3><p>The original property calculator used made-up transfer duty brackets. It now uses the SARS table (no duty up to R1,210,000), checked against SARS's published figures.</p></div><div class="card case-decision"><h3>Privacy by default</h3><p>Budgets, saved terms and game progress live only in the visitor's browser, never on a server.</p></div><div class="card case-decision"><h3>Pages, not one endless scroll</h3><p>The single page had grown past 15,000px. It is now six focused pages with a shared layout, and the glossary loads 24 terms at a time.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>Fixed the live deploy (Pages was publishing the repo root instead of src/), so the site loads at its public URL.</li><li>Fixed a broken mobile menu and the game crashing on its final day.</li><li>Content lives in data files, so new terms and resources can be added without touching layout code.</li></ul></section>
+
+    <nav class="case-pager" aria-label="More projects">
+      <a href="smartx.html" class="card"><span class="kicker">← Previous</span><strong>Smart-X</strong></a>
+      <a href="entice-feed.html" class="card case-pager-next"><span class="kicker">Next →</span><strong>Entice Feed</strong></a>
+    </nav>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Letlhogonolo Kgatshe</span>
+    <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
+  </footer>
+</body>
+</html>

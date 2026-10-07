@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entice Feed: Agri-SaaS website with real El Niño forecasting | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: Entice Feed, Agri-SaaS website with real El Niño forecasting. Entice Feed is building a platform that connects every player in South Africa's agricultural value chain.">
+  <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/entice-feed.html">
+  <meta property="og:title" content="Entice Feed: Agri-SaaS website with real El Niño forecasting">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/img/projects/entice-feed.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
+      <nav class="nav-links nav-links-case">
+        <a href="../index.html#projects">← Projects</a>
+        <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case">
+    <p class="kicker case-kicker">2025–2026 · Freelance · design, development &amp; data modelling</p>
+    <h1>Entice Feed<span class="case-sub">Agri-SaaS website with real El Niño forecasting</span></h1>
+    <div class="case-links"><a href="https://letlhogonolo-kgatshe.github.io/entice-feed-website/" target="_blank" rel="noopener" class="btn">Live site ↗</a><a href="https://github.com/Letlhogonolo-Kgatshe/entice-feed-website" target="_blank" rel="noopener" class="btn btn-ghost">Code ↗</a></div>
+    <ul class="tags case-tags"><li>JavaScript</li><li>Tailwind CSS</li><li>Chart.js</li><li>Node.js</li><li>GitHub Actions</li><li>Open-Meteo · NOAA · World Bank APIs</li></ul>
+
+    <div class="case-metrics"><div class="stat"><span class="stat-value">−8.8%</span><span class="stat-label">SA cereal yield per +1 El Niño index (fitted)</span></div><div class="stat"><span class="stat-value">5</span><span class="stat-label">free public data sources</span></div><div class="stat"><span class="stat-value">Weekly</span><span class="stat-label">automatic data refresh</span></div></div>
+
+    <figure class="case-figure"><img src="../img/projects/entice-feed.jpg" alt="Entice Feed homepage with the live El Niño watch" width="800" height="500"></figure>
+
+    <section class="case-section"><h2>The problem</h2><p>Entice Feed is building a platform that connects every player in South Africa's agricultural value chain. Many agritech sites either pitch investors or talk over farmers. The client needed a site that explains the platform plainly, and proves its value with real insight rather than stock charts.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>A five-page site (Home, Platform, Live data, Plans, Contact) with a &quot;who it's for&quot; role picker that opens each stakeholder's tools directly.</li><li>A Node.js data pipeline, run weekly by GitHub Actions, that pulls NOAA's El Niño index, World Bank yields and maize prices, ECB exchange rates and ECMWF seasonal rainfall.</li><li>Models fitted from the data on every run: an El Niño outlook, a harvest outlook (yield vs El Niño since 1980) and a rand maize price forecast with 80% ranges.</li><li>Live 7-day weather and soil moisture per growing region, fetched directly in the browser.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="card case-decision"><h3>Learn effects, don't assume them</h3><p>Every coefficient is fitted from the data. The model found El Niño cuts SA yields by ~9% per point, but historically lowers world maize prices. The page explains this rather than hiding it.</p></div><div class="card case-decision"><h3>Honest by design</h3><p>A methodology panel states sources and limitations, and demo auction and tracking rows are labelled as sample data.</p></div><div class="card case-decision"><h3>No server to maintain</h3><p>A scheduled GitHub Action rebuilds the data file, so the site stays static, fast and free to host.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>With a very strong El Niño developing (ONI +2.16 in Aug 2026), the model projects the 2027 harvest at ~16% below trend.</li><li>The pipeline was verified end to end on GitHub, where it fetched, fitted and committed fresh data.</li><li>Fixed broken icons (an invalid Font Awesome kit), dead navigation links and forms that sent nothing.</li></ul></section>
+
+    <nav class="case-pager" aria-label="More projects">
+      <a href="safe.html" class="card"><span class="kicker">← Previous</span><strong>SAFE</strong></a>
+      <a href="glms.html" class="card case-pager-next"><span class="kicker">Next →</span><strong>GLMS</strong></a>
+    </nav>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Letlhogonolo Kgatshe</span>
+    <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
+  </footer>
+</body>
+</html>
