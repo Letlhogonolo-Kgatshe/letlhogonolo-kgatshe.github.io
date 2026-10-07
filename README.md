@@ -6,7 +6,7 @@ Personal portfolio of **Letlhogonolo Kgatshe**, a final-year Computer Science st
 
 ## What's on it
 
-- **Selected projects:** Smart-X (IoT data ingestion and anomaly detection) and SAFE (a FinTech hackathon entry) as featured case studies, plus GLMS, Penny Wise, ABC Retail, Cyber Aware Chatbot and two freelance websites. Each links to its source and demo.
+- **Selected projects:** Smart-X (IoT data ingestion and anomaly detection) and SAFE (a FinTech hackathon entry) as featured case studies, plus GLMS, Penny Wise, ABC Retail, Cyber Aware Chatbot and a freelance website (Entice Feed). Each links to its source and demo.
 - **Skills** grouped by use, with data and databases first.
 - **Experience:** tutoring (40 students a week across 6 modules), mentoring and career centre work.
 - **Academic record:** averages per year, with an expandable chart of every module mark.
