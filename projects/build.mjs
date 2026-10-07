@@ -106,6 +106,7 @@ const PROJECTS = [
         slug: 'abc-retail', title: 'ABC Retail', subtitle: 'Cloud e-commerce on Azure', year: '2025', role: 'Solo developer · CLDV6212 (Cloud Development B, 93%)',
         stack: ['.NET 8 MVC', 'Azure Table, Blob, Queue & File Storage', 'Azure Functions v4', 'ASP.NET Core Identity', 'SQL Server'],
         links: [['Code', GH + 'abc-retail-azure']],
+        img: 'abc-retail.jpg', imgAlt: 'ABC Retail product list for a signed-in customer, with images from Blob Storage',
         metrics: [['4', 'Azure storage services'], ['4', 'Azure Functions'], ['93%', 'final module mark']],
         problem: 'A retail store needs customers, products, orders, images, contracts and transactions stored reliably in the cloud, with each type of data in the service that suits it, and it must keep working if a cloud function is unavailable.',
         built: [
@@ -118,12 +119,13 @@ const PROJECTS = [
             ['Resilience', 'Orders are always saved, through the function if possible and directly if not, and the user sees a clear warning.'],
             ['Security hygiene', 'Before publishing, real storage keys, SQL passwords and publish profiles were removed from the code and replaced with local-emulator settings.'],
         ],
-        results: ['Final module mark of 93%.', 'Runs locally against the Azurite emulator, with no Azure account needed to evaluate it.'],
+        results: ['Final module mark of 93%.', 'Runs locally against the Azurite emulator, with no Azure account needed to evaluate it.', 'A later review found that product, customer and order management was open to anyone. It is now admin-only, and customers get a working Add to cart flow.'],
     },
     {
         slug: 'cyber-aware-chatbot', title: 'Cyber Aware Chatbot', subtitle: 'Teaching cybersecurity through conversation', year: '2025', role: 'Solo developer · PROG6221 (Programming 2A)',
         stack: ['C#', 'WPF', 'MVVM', '.NET 8', 'xUnit', 'Newtonsoft.Json'],
         links: [['Code', GH + 'cyber-aware-chatbot']],
+        img: 'cyber-aware-chatbot.jpg', imgAlt: 'Cyber Aware Chatbot answering What is phishing?',
         metrics: [['23', 'passing xUnit tests in CI'], ['12+', 'security topics with synonyms'], ['3', 'themes: light, dark, blue']],
         problem: 'Most people learn about phishing and weak passwords only after something goes wrong. The goal was a friendly desktop app that teaches security through conversation, quizzes and small tasks.',
         built: [

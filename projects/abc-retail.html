@@ -7,7 +7,7 @@
   <meta name="description" content="Case study: ABC Retail, Cloud e-commerce on Azure. A retail store needs customers, products, orders, images, contracts and transactions stored reliably in the cloud, with each type of data in the service that suits it, and it must keep working if a cloud function is unavailable..">
   <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/abc-retail.html">
   <meta property="og:title" content="ABC Retail: Cloud e-commerce on Azure">
-  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/profile.jpg">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/img/projects/abc-retail.jpg">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,12 +34,12 @@
 
     <div class="case-metrics"><div class="stat"><span class="stat-value">4</span><span class="stat-label">Azure storage services</span></div><div class="stat"><span class="stat-value">4</span><span class="stat-label">Azure Functions</span></div><div class="stat"><span class="stat-value">93%</span><span class="stat-label">final module mark</span></div></div>
 
-    
+    <figure class="case-figure"><img src="../img/projects/abc-retail.jpg" alt="ABC Retail product list for a signed-in customer, with images from Blob Storage" width="800" height="500"></figure>
 
     <section class="case-section"><h2>The problem</h2><p>A retail store needs customers, products, orders, images, contracts and transactions stored reliably in the cloud, with each type of data in the service that suits it, and it must keep working if a cloud function is unavailable.</p></section>
     <section class="case-section"><h2>What I built</h2><ul class="points"><li>Customers, products, orders and carts in Table Storage; product images in Blob Storage behind 60-minute SAS URLs; contracts in an Azure File Share; transactions in Queue Storage.</li><li>Four HTTP-triggered Azure Functions for storage writes, with a fallback to direct SDK calls if a function fails.</li><li>SQL Server Identity with Admin and Customer roles, a cart with a live badge, and an admin order workflow.</li></ul></section>
     <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="card case-decision"><h3>Right store for each data type</h3><p>Structured records go to tables, binary files to blobs, documents to file shares and events to queues.</p></div><div class="card case-decision"><h3>Resilience</h3><p>Orders are always saved, through the function if possible and directly if not, and the user sees a clear warning.</p></div><div class="card case-decision"><h3>Security hygiene</h3><p>Before publishing, real storage keys, SQL passwords and publish profiles were removed from the code and replaced with local-emulator settings.</p></div></div></section>
-    <section class="case-section"><h2>Results</h2><ul class="points"><li>Final module mark of 93%.</li><li>Runs locally against the Azurite emulator, with no Azure account needed to evaluate it.</li></ul></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>Final module mark of 93%.</li><li>Runs locally against the Azurite emulator, with no Azure account needed to evaluate it.</li><li>A later review found that product, customer and order management was open to anyone. It is now admin-only, and customers get a working Add to cart flow.</li></ul></section>
 
     <nav class="case-pager" aria-label="More projects">
       <a href="penny-wise.html" class="card"><span class="kicker">← Previous</span><strong>Penny Wise</strong></a>
