@@ -1,291 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Letlhogonolo Kgatshe, a Computer Science student specializing in Java, C#, and Azure development.">
-    <meta name="keywords" content="Letlhogonolo Kgatshe, portfolio, computer science, Java, C#, Azure, web development">
-    <meta name="author" content="Letlhogonolo Kgatshe">
-    <title>Letlhogonolo Kgatshe - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4C+X6FfnJmE6tE62D3GZoKcD5nHct6bUyBrT3p5N+0h5iFwV0QhH6Tt4HcGlwSZk+wTjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letlhogonolo Kgatshe — Data Analytics & Software</title>
+  <meta name="description" content="Letlhogonolo Kgatshe — final-year Computer Science student in Cape Town focused on data analytics, SQL, cloud and software development.">
+  <meta property="og:title" content="Letlhogonolo Kgatshe — Data Analytics & Software">
+  <meta property="og:description" content="Final-year Computer Science student focused on data analytics. 19 distinctions from 20 modules.">
+  <meta property="og:image" content="profile.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f766e'/><rect x='7' y='17' width='4' height='8' fill='white'/><rect x='14' y='11' width='4' height='14' fill='white'/><rect x='21' y='7' width='4' height='18' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-left">
-                <img src="Letlhogonolo Kgatshe.img.JPG" alt="Letlhogonolo Kgatshe" class="profile-img">
-                <h1>Letlhogonolo Kgatshe</h1>
-            </div>
-            <nav>
-                <ul id="nav-links" role="navigation">
-                    <li><a href="#hero" aria-label="Home">Home</a></li>
-                    <li><a href="#about" aria-label="About Me">About</a></li>
-                    <li><a href="#projects" aria-label="Projects">Projects</a></li>
-                    <li><a href="#skills" aria-label="Skills">Skills</a></li>
-                    <li><a href="#work-experience" aria-label="Work Experience">Experience</a></li>
-                    <li><a href="#education" aria-label="Education">Education</a></li>
-                    <li><a href="#certificates" aria-label="Certificates">Certificates</a></li>
-                    <li><a href="#contact" aria-label="Contact">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger" aria-label="Toggle Menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">LK<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#academics">Academics</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="Letlhogonolo Kgatshe CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="hero">
-        <div class="container">
-            <h1>Welcome, I'm Letlhogonolo</h1>
-            <p class="tagline">Building Innovative Solutions with Code</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                <a href="Letlhogonolo Kgatshe CV.pdf" download class="btn btn-secondary">Download Resume</a>
-            </div>
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="eyebrow">Cape Town, South Africa · Open to graduate roles</p>
+        <h1>Letlhogonolo Kgatshe</h1>
+        <p class="role">Aspiring Data Analyst · Final-year Computer Science student</p>
+        <p class="lead">
+          I turn raw data into clear answers. I'm finishing a BSc in Computer &amp; Information Sciences
+          (Application Development) at Varsity College, with a focus on SQL, information systems,
+          cloud and building the software that data lives in.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">View projects</a>
+          <a href="Letlhogonolo Kgatshe CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
         </div>
+        <div class="socials">
+          <a href="https://github.com/Letlhogonolo-Kgatshe" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/letlhogonolo-kgatshe-69aa2a2b7/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:Tlhogikgatshe@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="profile.jpg" alt="Portrait of Letlhogonolo Kgatshe" width="640" height="640">
+      </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Enthusiastic Computer Science student at Varsity College, Cape Town, passionate about creating impactful tech solutions. Proficient in Java, C#, Azure, and web development, I excel in problem-solving and innovation through projects like e-commerce platforms and cybersecurity chatbots. As a mentor and tutor, I enjoy sharing knowledge and staying ahead with emerging technologies.</p>
-        </div>
+    <!-- Key numbers -->
+    <section class="container">
+      <div class="stats">
+        <div class="stat"><span class="stat-value">82.5%</span><span class="stat-label">Average final mark</span></div>
+        <div class="stat"><span class="stat-value">19/20</span><span class="stat-label">Modules passed with distinction</span></div>
+        <div class="stat"><span class="stat-value">93%</span><span class="stat-label">Top mark · Cloud Development B</span></div>
+        <div class="stat"><span class="stat-value">300</span><span class="stat-label">NQF credits earned (of 360)</span></div>
+      </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="booking-placeholder.jpg" alt="Booking Platform" loading="lazy">
-                    <h3>Booking Platform</h3>
-                    <p>An Booking platform for booking an event, venue .</p>
-                    <p><strong>Technologies:</strong> C#, SQL, HTML, CSS, JavaScript, Azure</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/Booking-Webpage.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-                <div class="project-card">
-                    <img src="ecommerce-placeholder.jpg" alt="E-commerce Platform" loading="lazy">
-                    <h3>E-commerce Platform</h3>
-                    <p>An e-commerce platform for ordering and receiving packages, launched on Azure.</p>
-                    <p><strong>Technologies:</strong> C#, SQL, HTML, CSS, JavaScript, Azure</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/E-commerce-platform.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-                <div class="project-card">
-                    <img src="chatbot-placeholder.jpg" alt="Cybersecurity ChatBot" loading="lazy">
-                    <h3>Cybersecurity ChatBot</h3>
-                    <p>A chatbot for answering cybersecurity queries, built with C# and Azure.</p>
-                    <p><strong>Technologies:</strong> C#, SQL, HTML, CSS, JavaScript, Azure</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/ChatBot.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-                <div class="project-card">
-                    <img src="portfolio-placeholder.jpg" alt="Portfolio Website" loading="lazy">
-                    <h3>Portfolio Website</h3>
-                    <p>A responsive portfolio showcasing my skills and projects.</p>
-                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                    <a href="https://letlhogonolo-kgatshe.github.io/Letlhogonolo.github.io/" target="_blank" class="btn btn-primary">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="snake-placeholder.jpg" alt="Snake Game" loading="lazy">
-                    <h3>Snake Game</h3>
-                    <p>A classic Snake game built with Java and JFrame.</p>
-                    <p><strong>Technologies:</strong> Java, JFrame</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/SnakeGame.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-                <div class="project-card">
-                    <img src="student-placeholder.jpg" alt="Student Registration System" loading="lazy">
-                    <h3>Student Registration System</h3>
-                    <p>A Java application for managing student registrations.</p>
-                    <p><strong>Technologies:</strong> Java</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/Student-registry.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-                <div class="project-card">
-                    <img src="quiz-placeholder.jpg" alt="Quiz App" loading="lazy">
-                    <h3>Quiz App</h3>
-                    <p>A Java-based quiz game with dynamic questions.</p>
-                    <p><strong>Technologies:</strong> Java</p>
-                    <a href="https://github.com/Letlhogonolo-Kgatshe/Quiz-App.git" target="_blank" class="btn btn-primary">View Code</a>
-                </div>
-            </div>
+    <!-- About -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm fascinated by what data can reveal: the connections hiding in a dataset that nobody
+            thought to look for. I have an eye for detail and a natural pull towards patterns, which
+            helps me take abstract problems and make them concrete.
+          </p>
+          <p>
+            AI can match patterns at scale, but people are still better at stepping back, seeing the whole
+            landscape and asking the right question. That's where I want to work: using modern tools to
+            distil a problem down to its essence, then letting the data answer it.
+          </p>
+          <p>
+            I'm especially drawn to finance and consumer behaviour, from spending trends to the habits
+            underneath them. I don't believe in reinventing the wheel. Often the simplest solution is the best one.
+          </p>
+          <blockquote>"Perfection is achieved when there is nothing left to take away." <cite>— Antoine de Saint-Exupéry, a motto I work by</cite></blockquote>
         </div>
+        <aside class="facts">
+          <dl>
+            <div><dt>Focus</dt><dd>Data analytics, SQL, information systems</dd></div>
+            <div><dt>Studying</dt><dd>BSc Computer &amp; Information Sciences, Application Development, Varsity College (2024–2026)</dd></div>
+            <div><dt>Based in</dt><dd>Cape Town, South Africa</dd></div>
+            <div><dt>Languages</dt><dd>Setswana, English (native) · Afrikaans (proficient) · Spanish (A1)</dd></div>
+            <div><dt>Interests</dt><dd>Finance &amp; economics, psychology &amp; philosophy, chess, calisthenics, hockey, photography</dd></div>
+          </dl>
+        </aside>
+      </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill"><span>Java</span><div class="progress-bar" style="width: 85%"></div></div>
-                    <div class="skill"><span>C#</span><div class="progress-bar" style="width: 80%"></div></div>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <div class="skill"><span>HTML</span><div class="progress-bar" style="width: 90%"></div></div>
-                    <div class="skill"><span>CSS</span><div class="progress-bar" style="width: 85%"></div></div>
-                    <div class="skill"><span>JavaScript</span><div class="progress-bar" style="width: 75%"></div></div>
-                    <div class="skill"><span>SQL</span><div class="progress-bar" style="width: 70%"></div></div>
-                </div>
-                <div class="skill-category">
-                    <h3>Version Control & Cloud</h3>
-                    <div class="skill"><span>Git</span><div class="progress-bar" style="width: 80%"></div></div>
-                    <div class="skill"><span>GitHub</span><div class="progress-bar" style="width: 80%"></div></div>
-                    <div class="skill"><span>Microsoft Azure</span><div class="progress-bar" style="width: 75%"></div></div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <div class="skill"><span>JUnit Testing</span><div class="progress-bar" style="width: 70%"></div></div>
-                    <div class="skill"><span>Microsoft Office Suite</span><div class="progress-bar" style="width: 90%"></div></div>
-                    <div class="skill"><span>Visual Studio Code</span><div class="progress-bar" style="width: 85%"></div></div>
-                </div>
-                <div class="skill-category">
-                    <h3>Soft Skills</h3>
-                    <div class="skill"><span>Tutoring</span><div class="progress-bar" style="width: 85%"></div></div>
-                    <div class="skill"><span>Communication</span><div class="progress-bar" style="width: 90%"></div></div>
-                    <div class="skill"><span>Mentorship</span><div class="progress-bar" style="width: 80%"></div></div>
-                </div>
-            </div>
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Data &amp; Databases</h3>
+          <p>Querying, modelling and storing data to answer business questions.</p>
+          <ul class="tags">
+            <li>SQL</li><li>Azure SQL Database</li><li>Relational modelling</li><li>Information Systems</li><li>Excel</li><li>Python</li>
+          </ul>
         </div>
+        <div class="skill-card">
+          <h3>Programming</h3>
+          <p>Object-oriented development across desktop, web and mobile.</p>
+          <ul class="tags">
+            <li>C#</li><li>.NET MVC</li><li>Java</li><li>Kotlin (Android)</li><li>JavaScript</li><li>HTML &amp; CSS</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Cloud &amp; DevOps</h3>
+          <p>Deploying and storing applications and data in the cloud.</p>
+          <ul class="tags">
+            <li>Microsoft Azure</li><li>Azure Storage</li><li>AWS DevOps</li><li>Git</li><li>GitHub</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Security &amp; Networking</h3>
+          <p>Secure-by-default thinking backed by coursework and hands-on labs.</p>
+          <ul class="tags">
+            <li>Network Engineering</li><li>Principles of Security</li><li>Burp Suite</li><li>Web fundamentals</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Tools &amp; Testing</h3>
+          <p>The everyday toolkit for writing, testing and shipping code.</p>
+          <ul class="tags">
+            <li>Visual Studio</li><li>VS Code</li><li>JUnit</li><li>Microsoft Office</li><li>LeetCode practice</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>People</h3>
+          <p>Explaining technical ideas clearly to different audiences.</p>
+          <ul class="tags">
+            <li>Tutoring</li><li>Mentoring</li><li>Public speaking</li><li>Problem solving</li><li>Attention to detail</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="work-experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="work-item">
-                <h3>Career Centre Volunteer</h3>
-                <p>February 2024 - Present</p>
-                <p>Assisted students with career planning and resume building at Varsity College.</p>
-            </div>
-            <div class="work-item">
-                <h3>Grit3sixT Mentorship</h3>
-                <p>February 2025 – Present</p>
-                <p>Mentored first-year students, providing guidance on academic and technical skills.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Academics -->
+    <section id="academics" class="section container">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>Academic record</h2>
+      </div>
+      <p class="section-intro">
+        Final marks for every module completed so far (Jan 2024 – Jun 2026). The dashed line marks the 75% distinction threshold.
+      </p>
+      <div class="chart-controls" role="tablist" aria-label="Filter by year">
+        <button class="chip active" data-year="all" role="tab" aria-selected="true">All</button>
+        <button class="chip" data-year="2024" role="tab" aria-selected="false">2024</button>
+        <button class="chip" data-year="2025" role="tab" aria-selected="false">2025</button>
+        <button class="chip" data-year="2026" role="tab" aria-selected="false">2026</button>
+        <span class="chart-summary" id="chart-summary"></span>
+      </div>
+      <div class="chart" id="marks-chart" aria-label="Bar chart of module marks"></div>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Bachelor of Science: Computer Science in Application Development</h3>
-                <p>Varsity College - Cape Town<br>2024 – 2026</p>
-            </div>
-            <div class="education-item">
-                <h3>National Senior Certificate</h3>
-                <p>Fields College - Rustenburg<br>2022</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="certificates">
-        <div class="container">
-            <h2>Certificates & Courses</h2>
-            <div class="certificate-item">
-                <h3>Try Hack Me (2024)</h3>
-                <ul>
-                    <li>Intro to Cyber Security</li>
-                    <li>Web Fundamentals</li>
-                    <li>Burp Suite</li>
-                </ul>
-            </div>
-            <div class="certificate-item">
-                <h3>AWS (2024)</h3>
-                <ul>
-                    <li>Getting Started with DevOps on AWS</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="languages">
-        <div class="container">
-            <h2>Languages</h2>
+      <div class="certs">
+        <h3>Certificates &amp; courses</h3>
         <ul>
-            <li>Setswana: Native Speaker</li>
-            <li>English: First Language</li>
-            <li>Afrikaans: Proficient</li>
-            <li>Spanish: Beginner (A1)</li>
+          <li><span class="cert-org">AWS</span> Getting Started with DevOps on AWS <span class="cert-year">2024</span></li>
+          <li><span class="cert-org">TryHackMe</span> Intro to Cyber Security <span class="cert-year">2024</span></li>
+          <li><span class="cert-org">TryHackMe</span> Web Fundamentals <span class="cert-year">2024</span></li>
+          <li><span class="cert-org">TryHackMe</span> Burp Suite <span class="cert-year">2024</span></li>
         </ul>
+      </div>
     </section>
 
-    <section id="hobbies">
-        <div class="container">
-            <h2>Hobbies and Interests</h2>
-            <ul>
-                <li>Exploring the history of technology</li>
-                <li>Engaging with emerging tech trends</li>
-                <li>Coding projects</li>
-                <li>Psychology and philosophy</li>
-                <li>Calisthenics and fitness</li>
-                <li>Hockey</li>
-                <li>Chess</li>
-            </ul>
-        </div>
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects">
+        <article class="project featured">
+          <div class="project-meta"><span>Hackathon · FinTech</span><span>2026</span></div>
+          <h3>SAFE: South African Financial Education</h3>
+          <p>An intervarsity hackathon submission that makes financial literacy approachable for South Africans, bringing together my interests in finance, education and technology.</p>
+          <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>FinTech</li></ul>
+          <a class="project-link" href="https://github.com/Letlhogonolo-Kgatshe/SAFE" target="_blank" rel="noopener">View repository →</a>
+        </article>
+        <article class="project">
+          <div class="project-meta"><span>Cloud · Web app</span><span>2025</span></div>
+          <h3>Event Booking Platform</h3>
+          <p>Stores and manages bookings, events and venues, using an SQL database and Azure Storage.</p>
+          <ul class="tags small"><li>.NET MVC</li><li>C#</li><li>Azure SQL</li><li>Azure Storage</li></ul>
+          <a class="project-link" href="https://github.com/Letlhogonolo-Kgatshe/Booking-Webpage" target="_blank" rel="noopener">View repository →</a>
+        </article>
+        <article class="project">
+          <div class="project-meta"><span>Web app</span><span>2025</span></div>
+          <h3>Local E-commerce Platform</h3>
+          <p>Lets users browse, buy and review products made by local businesses.</p>
+          <ul class="tags small"><li>Web</li><li>Databases</li></ul>
+          <a class="project-link" href="https://github.com/Letlhogonolo-Kgatshe/E-commerce-platform" target="_blank" rel="noopener">View repository →</a>
+        </article>
+        <article class="project">
+          <div class="project-meta"><span>Desktop</span><span>2025</span></div>
+          <h3>ChatBot</h3>
+          <p>A conversational C# application that answers user questions and responds to keywords.</p>
+          <ul class="tags small"><li>C#</li><li>.NET</li></ul>
+          <a class="project-link" href="https://github.com/Letlhogonolo-Kgatshe/ChatBot" target="_blank" rel="noopener">View repository →</a>
+        </article>
+        <article class="project">
+          <div class="project-meta"><span>Data handling</span><span>2024</span></div>
+          <h3>Student Registry</h3>
+          <p>Accepts, manipulates and stores student information through a structured Java application.</p>
+          <ul class="tags small"><li>Java</li><li>OOP</li></ul>
+          <a class="project-link" href="https://github.com/Letlhogonolo-Kgatshe/Student-registry" target="_blank" rel="noopener">View repository →</a>
+        </article>
+        <article class="project">
+          <div class="project-meta"><span>Java</span><span>2024</span></div>
+          <h3>Quiz App &amp; Snake Game</h3>
+          <p>A quiz that serves randomised questions, and a classic Snake game, built to practise OOP and game loops.</p>
+          <ul class="tags small"><li>Java</li><li>OOP</li></ul>
+          <a class="project-link" href="https://github.com/Letlhogonolo-Kgatshe/Quiz-App" target="_blank" rel="noopener">Quiz App →</a>
+          <a class="project-link" href="https://github.com/Letlhogonolo-Kgatshe/SnakeGame" target="_blank" rel="noopener">Snake Game →</a>
+        </article>
+      </div>
     </section>
 
-    <section id="resume">
-        <div class="container">
-            <h2>Resume</h2>
-            <p>You can view or download my resume below:</p>
-            <div class="resume-buttons">
-                <a href="Letlhogonolo Kgatshe CV.pdf" target="_blank" class="btn btn-primary">View Resume</a>
-                <a href="Letlhogonolo Kgatshe CV.pdf" download class="btn btn-secondary">Download Resume</a>
-            </div>
-        </div>
-        <div class="container">
-            <h2>Transcript</h2>
-            <p>You can view or download my Transcript below:</p>
-            <div class="resume-buttons">
-                <a href="Letlhogonolo Kgatshe Final Statement_250119_082100_250517_062603.pdf" target="_blank" class="btn btn-primary">View Transcript</a>
-                <a href="Letlhogonolo Kgatshe Final Statement_250119_082100_250517_062603.pdf" download class="btn btn-secondary">Download Transcript</a>
-            </div>
-        </div>
+    <!-- Experience -->
+    <section id="experience" class="section container">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2>Experience</h2>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span class="when">Feb 2025 – Present</span>
+          <div>
+            <h3>Computer Science Tutor <span class="org">· Varsity College</span></h3>
+            <p>Tutor 1st- and 2nd-year students in programming, help debug their code and explain concepts in plain language.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">Feb 2025 – Dec 2025</span>
+          <div>
+            <h3>Mentor <span class="org">· Grit3sixT Mentorship</span></h3>
+            <p>Mentored 1st- and 2nd-year students on studying, career planning and settling into tertiary life.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">Feb 2024 – Dec 2025</span>
+          <div>
+            <h3>Career Centre Volunteer <span class="org">· Varsity College</span></h3>
+            <p>Helped students get ready for work, from CVs to career events, and built my public speaking along the way.</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p><strong>Location:</strong> Cape Town, 7708</p>
-                <p><strong>Phone:</strong> <a href="tel:+27664207144">+27 664 207 144</a></p>
-                <p><strong>Email:</strong> <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/letlhogonolo-kgatshe-69aa2a2b7/" target="_blank">Letlhogonolo Kgatshe</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/Letlhogonolo-Kgatshe" target="_blank">github.com/Letlhogonolo-Kgatshe</a></p>
-                <p><strong>Portfolio:</strong> <a href="https://letlhogonolo-kgatshe.github.io/Letlhogonolo.github.io/" target="_blank">letlhogonolo-kgatshe.github.io</a></p>
-            </div>
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <div class="contact">
+        <h2>Let's work with data together.</h2>
+        <p>I'm looking for graduate and internship roles in data analytics and software development. I'll reply quickly.</p>
+        <div class="contact-links">
+          <a href="mailto:Tlhogikgatshe@gmail.com" class="btn">Tlhogikgatshe@gmail.com</a>
+          <a href="tel:+27664207144" class="btn btn-ghost">+27 66 420 7144</a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <section id="contact-form">
-        <div class="contact-form">
-                <h3>Get in Touch</h3>
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required aria-required="true" aria-label="Your Name">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required aria-required="true" aria-label="Your Email">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required aria-required="true" aria-label="Your Message"></textarea>
-                    <input type="submit" value="Send" class="btn btn-primary">
-                </form>
-                <div id="form-message" class="form-message"></div>
-            </div>
-    </section>
+  <footer class="container footer">
+    <span>© <span id="year"></span> Letlhogonolo Kgatshe</span>
+    <span>Built with HTML, CSS &amp; JavaScript · Hosted on GitHub Pages</span>
+  </footer>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Letlhogonolo Kgatshe. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
