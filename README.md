@@ -1,6 +1,6 @@
 # Letlhogonolo Kgatshe: Portfolio
 
-Personal portfolio of **Letlhogonolo Kgatshe**, a final-year Computer Science student in Cape Town and aspiring data analyst.
+Personal portfolio of **Letlhogonolo Kgatshe**, a final-year Computer and Information Sciences student at IIE Emeris, Cape Town, and aspiring data analyst.
 
 **Live:** https://letlhogonolo-kgatshe.github.io/
 
