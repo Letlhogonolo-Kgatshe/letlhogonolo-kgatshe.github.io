@@ -45,7 +45,6 @@
       <div class="hero-text">
         <div class="hero-id">
           <img src="profile.jpg" alt="Portrait of Letlhogonolo Kgatshe" class="hero-avatar" width="640" height="640">
-          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Open to graduate &amp; internship roles · Cape Town</p>
         </div>
         <h1>I turn messy data into clear answers, and build the software it lives in.</h1>
         <p class="lead">
@@ -56,6 +55,7 @@
           <a href="#projects" class="btn">See my work</a>
           <a href="Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
         </div>
+        <p class="status"><span class="dot" aria-hidden="true"></span>Open to graduate &amp; internship roles · Cape Town</p>
         <div class="socials">
           <a href="https://github.com/Letlhogonolo-Kgatshe" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
@@ -98,8 +98,8 @@
           <img src="img/projects/smartx.jpg" alt="Smart-X live telemetry dashboard showing fleet health and critical devices" loading="lazy" width="799" height="506">
         </a>
         <div class="feature-body">
-          <p class="kicker">Data pipeline · 2026</p>
           <h3>Smart-X: IoT data ingestion &amp; anomaly detection</h3>
+          <p class="meta">Data pipeline · 2026</p>
           <p>A gateway that ingests live telemetry from a simulated fleet of ESP32 sensors, validates every packet and ranks anomalies by severity in real time. The dashboard shows fleet health at a glance and suggests the next action for each failing device.</p>
           <ul class="points">
             <li>Real-time ingestion, with dropouts and threshold breaches injected on purpose</li>
@@ -107,8 +107,8 @@
             <li>Encrypted file attachments, Docker Compose, and 64 passing xUnit tests in CI</li>
           </ul>
           <ul class="tags"><li>ASP.NET Core</li><li>Blazor</li><li>xUnit</li><li>Docker</li></ul>
-          <div class="links"><a href="projects/smartx.html" class="card-cta">Case study →</a><a href="https://github.com/Letlhogonolo-Kgatshe/smartx-iot-gateway" target="_blank" rel="noopener">Code →</a>
-            <a href="https://youtu.be/Xduldm-qM7Y" target="_blank" rel="noopener">Video demo →</a>
+          <div class="links"><a href="projects/smartx.html" class="card-cta">Case study</a><a href="https://github.com/Letlhogonolo-Kgatshe/smartx-iot-gateway" target="_blank" rel="noopener">Code</a>
+            <a href="https://youtu.be/Xduldm-qM7Y" target="_blank" rel="noopener">Video demo</a>
           </div>
         </div>
       </article>
@@ -118,8 +118,8 @@
           <img src="img/projects/safe.jpg" alt="SAFE South African Financial Education homepage" loading="lazy" width="800" height="500">
         </a>
         <div class="feature-body">
-          <p class="kicker">FinTech hackathon · 2025</p>
           <h3>SAFE: South African Financial Education</h3>
+          <p class="meta">FinTech hackathon · 2025</p>
           <p>My solo entry to the South African Intervarsity Hackathon: the financial-literacy site I wish I'd had when I started learning about money.</p>
           <ul class="points">
             <li>A risk-free stock market game: $10,000 of virtual cash, market events and a live Chart.js price chart</li>
@@ -127,8 +127,8 @@
             <li>A 12-step learning path, an 88-term SA glossary with quizzes, and 47 curated SA resources</li>
           </ul>
           <ul class="tags"><li>JavaScript</li><li>Tailwind CSS</li><li>Chart.js</li><li>FinTech</li></ul>
-          <div class="links"><a href="projects/safe.html" class="card-cta">Case study →</a><a href="https://letlhogonolo-kgatshe.github.io/SAFE/" target="_blank" rel="noopener">Live site →</a>
-            <a href="https://github.com/Letlhogonolo-Kgatshe/SAFE" target="_blank" rel="noopener">Code →</a>
+          <div class="links"><a href="projects/safe.html" class="card-cta">Case study</a><a href="https://letlhogonolo-kgatshe.github.io/SAFE/" target="_blank" rel="noopener">Live site</a>
+            <a href="https://github.com/Letlhogonolo-Kgatshe/SAFE" target="_blank" rel="noopener">Code</a>
           </div>
         </div>
       </article>
@@ -137,57 +137,63 @@
         <article class="card">
           <img class="card-img" src="img/projects/glms.jpg" alt="GLMS dashboard with contract status counts" loading="lazy" width="800" height="500">
           <div class="card-body">
-            <p class="kicker">Enterprise app · 2026</p>
             <h3>GLMS: Logistics contract management</h3>
+            <p class="meta">Enterprise app · 2026</p>
             <p>REST API, Blazor frontend and SQL Server for managing contracts and service requests, built around the Factory, Observer and Strategy patterns, with live USD→ZAR conversion.</p>
             <ul class="tags"><li>.NET</li><li>EF Core</li><li>SQL Server</li><li>Swagger</li></ul>
-            <div class="links"><a href="projects/glms.html" class="card-cta">Case study →</a><a href="https://github.com/Letlhogonolo-Kgatshe/glms-contract-management" target="_blank" rel="noopener">Code →</a><a href="https://youtu.be/TWxagCLS1yQ" target="_blank" rel="noopener">Demo →</a></div>
+            <div class="links"><a href="projects/glms.html" class="card-cta">Case study</a><a href="https://github.com/Letlhogonolo-Kgatshe/glms-contract-management" target="_blank" rel="noopener">Code</a><a href="https://youtu.be/TWxagCLS1yQ" target="_blank" rel="noopener">Demo</a></div>
           </div>
         </article>
         <article class="card">
-          <div class="card-img card-img-logo"><img src="img/projects/penny-wise-logo.jpg" alt="Penny Wise logo" loading="lazy" width="120" height="120"></div>
+          <img class="card-img" src="img/projects/penny-wise.jpg" alt="Penny Wise welcome screen on an Android phone" loading="lazy" width="800" height="500">
           <div class="card-body">
-            <p class="kicker">Android · 2026</p>
             <h3>Penny Wise: Budgeting app</h3>
+            <p class="meta">Android · 2026</p>
             <p>Tracks expenses against monthly goals, charts spending by category and rewards good habits with XP and badges. Data syncs live, per user, through Firestore.</p>
             <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Firebase</li></ul>
-            <div class="links"><a href="projects/penny-wise.html" class="card-cta">Case study →</a><a href="https://github.com/Letlhogonolo-Kgatshe/penny-wise-budget-app" target="_blank" rel="noopener">Code →</a><a href="https://youtu.be/w4Cir029GtA" target="_blank" rel="noopener">Demo →</a></div>
+            <div class="links"><a href="projects/penny-wise.html" class="card-cta">Case study</a><a href="https://github.com/Letlhogonolo-Kgatshe/penny-wise-budget-app" target="_blank" rel="noopener">Code</a><a href="https://youtu.be/w4Cir029GtA" target="_blank" rel="noopener">Demo</a></div>
           </div>
         </article>
         <article class="card">
           <img class="card-img" src="img/projects/abc-retail.jpg" alt="ABC Retail product list with product images and Add to cart buttons" loading="lazy" width="800" height="500">
           <div class="card-body">
-            <p class="kicker">Cloud · 2025</p>
             <h3>ABC Retail: E-commerce on Azure</h3>
+            <p class="meta">Cloud · 2025</p>
             <p>An MVC store that puts each kind of data in the right Azure service: Tables for records, Blobs for images (SAS URLs), Queues for transactions and File Shares for contracts, all behind Azure Functions with a fallback.</p>
             <ul class="tags"><li>Azure Storage</li><li>Azure Functions</li><li>.NET MVC</li><li>Identity</li></ul>
-            <div class="links"><a href="projects/abc-retail.html" class="card-cta">Case study →</a><a href="https://github.com/Letlhogonolo-Kgatshe/abc-retail-azure" target="_blank" rel="noopener">Code →</a></div>
+            <div class="links"><a href="projects/abc-retail.html" class="card-cta">Case study</a><a href="https://github.com/Letlhogonolo-Kgatshe/abc-retail-azure" target="_blank" rel="noopener">Code</a></div>
           </div>
         </article>
         <article class="card">
           <img class="card-img" src="img/projects/cyber-aware-chatbot.jpg" alt="Cyber Aware Chatbot answering a question about phishing" loading="lazy" width="800" height="500">
           <div class="card-body">
-            <p class="kicker">Desktop · 2025</p>
             <h3>Cyber Aware Chatbot</h3>
+            <p class="meta">Desktop · 2025</p>
             <p>A WPF app that teaches cybersecurity through conversation, with sentiment-aware replies, guided tutorials, a quiz, a points system and a security to-do list.</p>
             <ul class="tags"><li>C#</li><li>WPF</li><li>MVVM</li></ul>
-            <div class="links"><a href="projects/cyber-aware-chatbot.html" class="card-cta">Case study →</a><a href="https://github.com/Letlhogonolo-Kgatshe/cyber-aware-chatbot" target="_blank" rel="noopener">Code →</a></div>
+            <div class="links"><a href="projects/cyber-aware-chatbot.html" class="card-cta">Case study</a><a href="https://github.com/Letlhogonolo-Kgatshe/cyber-aware-chatbot" target="_blank" rel="noopener">Code</a></div>
           </div>
         </article>
       </div>
 
       <h3 class="subhead">Freelance work</h3>
-      <div class="project-grid two">
-        <article class="card">
-          <img class="card-img" src="img/projects/entice-feed.jpg" alt="Entice Feed homepage with the live El Niño watch" loading="lazy" width="800" height="500">
-          <div class="card-body">
-            <h3>Entice Feed</h3>
-            <p>Five-page site for a South African agri-SaaS start-up. A weekly data pipeline pulls NOAA, World Bank and Open-Meteo data and fits El Niño, harvest and maize-price forecasts.</p>
-            <ul class="tags"><li>JavaScript</li><li>Node.js</li><li>GitHub Actions</li><li>Open data</li></ul>
-            <div class="links"><a href="projects/entice-feed.html" class="card-cta">Case study →</a><a href="https://letlhogonolo-kgatshe.github.io/entice-feed-website/" target="_blank" rel="noopener">Live →</a><a href="https://github.com/Letlhogonolo-Kgatshe/entice-feed-website" target="_blank" rel="noopener">Code →</a></div>
-          </div>
-        </article>
-      </div>
+      <article class="feature">
+        <a class="feature-media" href="https://letlhogonolo-kgatshe.github.io/entice-feed-website/" target="_blank" rel="noopener">
+          <img src="img/projects/entice-feed.jpg" alt="Entice Feed homepage with the live El Niño watch" loading="lazy" width="800" height="500">
+        </a>
+        <div class="feature-body">
+          <h3>Entice Feed: Agri-SaaS website with live El Niño forecasting</h3>
+          <p class="meta">Freelance client · 2025–2026</p>
+          <p>A five-page site for a South African agri-SaaS start-up that explains the platform plainly and proves its value with real data instead of stock charts.</p>
+          <ul class="points">
+            <li>A weekly GitHub Actions pipeline pulls NOAA, World Bank, ECB and Open-Meteo data</li>
+            <li>Models refitted on every run: El Niño outlook, harvest vs trend, and rand maize prices with 80% ranges</li>
+            <li>A methodology panel states sources and limits, and sample data is labelled as sample data</li>
+          </ul>
+          <ul class="tags"><li>JavaScript</li><li>Node.js</li><li>GitHub Actions</li><li>Chart.js</li></ul>
+          <div class="links"><a href="projects/entice-feed.html" class="card-cta">Case study</a><a href="https://letlhogonolo-kgatshe.github.io/entice-feed-website/" target="_blank" rel="noopener">Live site</a><a href="https://github.com/Letlhogonolo-Kgatshe/entice-feed-website" target="_blank" rel="noopener">Code</a></div>
+        </div>
+      </article>
     </section>
 
     <!-- Skills -->

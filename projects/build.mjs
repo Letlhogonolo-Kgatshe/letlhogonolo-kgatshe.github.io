@@ -87,7 +87,7 @@ const PROJECTS = [
         slug: 'penny-wise', title: 'Penny Wise', subtitle: 'Android budgeting app', year: '2026', role: 'Developer · PROG7313 (Programming 3C)',
         stack: ['Kotlin', 'Jetpack Compose', 'Firebase Auth', 'Cloud Firestore', 'Coroutines & Flow', 'JUnit'],
         links: [['Code', GH + 'penny-wise-budget-app'], ['Video demo', 'https://youtu.be/w4Cir029GtA']],
-        img: 'penny-wise-logo.jpg', imgAlt: 'Penny Wise app logo', imgContain: true,
+        img: 'penny-wise.jpg', imgAlt: 'Penny Wise welcome screen on an Android phone',
         metrics: [['5', 'core screens'], ['7', 'achievement badges'], ['9', 'unit tests in CI']],
         problem: 'Most people abandon budgeting apps within weeks. Penny Wise makes tracking expenses against monthly goals visual and rewarding, so logging spending becomes a habit.',
         built: [
@@ -166,16 +166,16 @@ const page = (p, i) => {
     <div class="container nav-inner">
       <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
       <nav class="nav-links nav-links-case">
-        <a href="../index.html#projects">← Projects</a>
+        <a href="../index.html#projects">All projects</a>
         <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="container case">
-    <p class="kicker case-kicker">${esc(p.year)} · ${esc(p.role)}</p>
     <h1>${esc(p.title)}<span class="case-sub">${esc(p.subtitle)}</span></h1>
-    <div class="case-links">${p.links.map(([l, h]) => `<a href="${h}" target="_blank" rel="noopener" class="btn${l === p.links[0][0] ? '' : ' btn-ghost'}">${l} ↗</a>`).join('')}</div>
+    <p class="meta case-meta">${esc(p.year)} · ${esc(p.role)}</p>
+    <div class="case-links">${p.links.map(([l, h]) => `<a href="${h}" target="_blank" rel="noopener" class="btn${l === p.links[0][0] ? '' : ' btn-ghost'}">${l}</a>`).join('')}</div>
     <ul class="tags case-tags">${p.stack.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
 
     <div class="case-metrics">${p.metrics.map(([v, l]) => `<div class="stat"><span class="stat-value">${esc(v)}</span><span class="stat-label">${esc(l)}</span></div>`).join('')}</div>
@@ -184,12 +184,12 @@ const page = (p, i) => {
 
     <section class="case-section"><h2>The problem</h2><p>${esc(p.problem)}</p></section>
     <section class="case-section"><h2>What I built</h2><ul class="points">${p.built.map((b) => `<li>${esc(b)}</li>`).join('')}</ul></section>
-    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions">${p.decisions.map(([t, d]) => `<div class="card case-decision"><h3>${esc(t)}</h3><p>${esc(d)}</p></div>`).join('')}</div></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions">${p.decisions.map(([t, d]) => `<div class="case-decision"><h3>${esc(t)}</h3><p>${esc(d)}</p></div>`).join('')}</div></section>
     <section class="case-section"><h2>Results</h2><ul class="points">${p.results.map((r) => `<li>${esc(r)}</li>`).join('')}</ul></section>
 
     <nav class="case-pager" aria-label="More projects">
-      <a href="${prev.slug}.html" class="card"><span class="kicker">← Previous</span><strong>${esc(prev.title)}</strong></a>
-      <a href="${next.slug}.html" class="card case-pager-next"><span class="kicker">Next →</span><strong>${esc(next.title)}</strong></a>
+      <a href="${prev.slug}.html" class="card"><span class="kicker">Previous project</span><strong>${esc(prev.title)}</strong></a>
+      <a href="${next.slug}.html" class="card case-pager-next"><span class="kicker">Next project</span><strong>${esc(next.title)}</strong></a>
     </nav>
   </main>
 
