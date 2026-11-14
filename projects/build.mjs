@@ -153,7 +153,7 @@ const PROJECTS = [
             'A list of upcoming Cape Town events for field trips, loaded from a data file that is refreshed every Monday.',
         ],
         decisions: [
-            ['One file, no framework', 'The whole app is a single HTML file with no dependencies or build step. It loads fast, works offline once opened and can be installed to a phone home screen.'],
+            ['One file, no framework', 'The whole app is a single HTML file with no dependencies or build step. It loads fast and can be added to a phone home screen.'],
             ['Progress stays private', 'Everything is saved in the browser. Sync across devices is opt-in and uses a secret GitHub gist, with a token that only has the gist permission, so there is no server and no account to create.'],
             ['Content separate from code', 'Events live in events.json, so they can be refreshed weekly without touching the app.'],
         ],
