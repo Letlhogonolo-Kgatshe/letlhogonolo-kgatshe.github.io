@@ -139,6 +139,26 @@ const PROJECTS = [
         ],
         results: ['23 tests run on Windows CI on every push.', 'Grew from a console chatbot (Part 1) into a full WPF app (Part 3).'],
     },
+    {
+        slug: 'ascend', title: 'Ascend', subtitle: 'A personal curriculum app', year: '2026', role: 'Solo · personal tool I use every day',
+        stack: ['JavaScript', 'HTML & CSS', 'GitHub Gist API', 'Web app manifest', 'GitHub Pages'],
+        links: [['Live app', 'https://letlhogonolo-kgatshe.github.io/ascend/'], ['Code', GH + 'ascend']],
+        img: 'ascend.jpg', imgAlt: "Ascend's Today view with the day's sessions, daily minimums and weekly targets",
+        metrics: [['8 weeks', 'per learning season'], ['37', 'milestones on the data analyst path'], ['1 file', 'no framework or build step']],
+        problem: 'I was learning data analytics, photography and reading from scattered notes and bookmarks, with no weekly plan and no way to see whether I was keeping up. I wanted one place that tells me what to do today, tracks what I actually did, and works on both my laptop and my phone.',
+        built: [
+            'A curriculum in eight-week seasons, with five views: Today, Learn, Reading, Plan and Progress.',
+            'A 37-milestone path to a junior data analyst job (CV and applications, Excel, Power BI, SQL, statistics, Python, three portfolio projects), ordered by what current Cape Town job listings ask for.',
+            'Weekly study targets per subject, daily minimums, streaks and a session log, so progress is measured in minutes studied and pages read.',
+            'A list of upcoming Cape Town events for field trips, loaded from a data file that is refreshed every Monday.',
+        ],
+        decisions: [
+            ['One file, no framework', 'The whole app is a single HTML file with no dependencies or build step. It loads fast, works offline once opened and can be installed to a phone home screen.'],
+            ['Progress stays private', 'Everything is saved in the browser. Sync across devices is opt-in and uses a secret GitHub gist, with a token that only has the gist permission, so there is no server and no account to create.'],
+            ['Content separate from code', 'Events live in events.json, so they can be refreshed weekly without touching the app.'],
+        ],
+        results: ['Live on GitHub Pages and in daily use since 29 October 2026.', 'Season 1 runs from 26 October to 20 December 2026.', 'The data path feeds this portfolio: its milestones include the projects and case studies shown here.'],
+    },
 ];
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
