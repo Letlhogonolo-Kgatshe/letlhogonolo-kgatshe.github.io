@@ -95,3 +95,14 @@ if ("IntersectionObserver" in window && !reducedMotion) {
     observer.observe(el);
   });
 }
+
+// Midnight hero: filter the project strip by tag
+const filterButtons = document.querySelectorAll("[data-filter]");
+const stripItems = document.querySelectorAll(".hero-strip li");
+filterButtons.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    const tag = btn.dataset.filter;
+    filterButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+    stripItems.forEach((li) => { li.hidden = tag !== "all" && !li.dataset.tags.split(" ").includes(tag); });
+  })
+);

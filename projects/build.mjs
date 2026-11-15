@@ -208,7 +208,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 const page = (p, i) => {
     const prev = PROJECTS[(i - 1 + PROJECTS.length) % PROJECTS.length], next = PROJECTS[(i + 1) % PROJECTS.length];
     return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-style="midnight">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -218,6 +218,7 @@ const page = (p, i) => {
   <meta property="og:title" content="${esc(p.title)}: ${esc(p.subtitle)}">
   <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/${p.img ? 'img/projects/' + p.img : 'profile.jpg'}">
   <meta name="theme-color" content="#0b1020">
+  <script>try{var s=localStorage.getItem('site-style');if(s==='quiet'||s==='showcase'){document.documentElement.setAttribute('data-style',s);}}catch(e){}</script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -231,6 +232,11 @@ const page = (p, i) => {
       <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
       <nav class="nav-links nav-links-case">
         <a href="../index.html#projects">All projects</a>
+        <div class="style-row"><span class="style-label">Style</span><div class="style-switch" role="group" aria-label="Site style">
+          <button type="button" data-style-set="quiet" aria-pressed="false">Quiet</button>
+          <button type="button" data-style-set="showcase" aria-pressed="false">Showcase</button>
+          <button type="button" data-style-set="midnight" aria-pressed="true">Midnight</button>
+        </div></div>
         <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
       </nav>
     </div>
@@ -261,6 +267,7 @@ const page = (p, i) => {
     <span>© ${new Date().getFullYear()} Letlhogonolo Kgatshe</span>
     <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
   </footer>
+  <script src="../style-switch.js"></script>
 </body>
 </html>
 `;
