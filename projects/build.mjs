@@ -206,11 +206,12 @@ const PROJECTS = [
 
 const STACKS = {"safe":{"name":"SAFE","url":"https://letlhogonolo-kgatshe.github.io/SAFE/","what":"home page","order":["showcase","quiet","midnight"]},"ascend":{"name":"Ascend","url":"https://letlhogonolo-kgatshe.github.io/ascend/","what":"Today view","order":["midnight","quiet","showcase"]},"entice-feed":{"name":"Entice Feed","url":"https://letlhogonolo-kgatshe.github.io/entice-feed-website/","what":"home page with the live El Niño watch","order":["quiet","showcase","midnight"]}};
 const cap = (s) => s[0].toUpperCase() + s.slice(1);
+const BACK = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>';
 const ARROW = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const stackHtml = (slug) => {
     const s = STACKS[slug];
     const cards = s.order.map((st, i) => `<img class="stack-card" data-pos="${i}" data-label="${cap(st)}" src="../img/projects/${slug}-${st}.jpg" alt="${s.name} ${s.what} in the ${cap(st)} style" width="800" height="500">`).join('');
-    return `<div class="case-stack shot-stack" data-stack><a class="stack-link" href="${s.url}" target="_blank" rel="noopener">${cards}</a><div class="stack-bar"><span class="stack-label" aria-live="polite">${cap(s.order[0])} · 1 of 3</span><button type="button" class="stack-next" aria-label="Show ${s.name} in the next style">${ARROW}</button></div></div>`;
+    return `<div class="case-stack shot-stack" data-stack><a class="stack-link" href="${s.url}" target="_blank" rel="noopener">${cards}</a><div class="stack-bar"><button type="button" class="stack-prev" aria-label="Show ${s.name} in the previous style">${BACK}</button><span class="stack-label" aria-live="polite">${cap(s.order[0])} · 1 of 3</span><button type="button" class="stack-next" aria-label="Show ${s.name} in the next style">${ARROW}</button></div></div>`;
 };
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const page = (p, i) => {
