@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart-X: IoT data ingestion &amp; anomaly detection | Letlhogonolo Kgatshe</title>
-  <meta name="description" content="Case study: Smart-X, IoT data ingestion &amp; anomaly detection. A fleet of IoT sensors streams readings into a gateway every few seconds.">
+  <title>Smart-X: IoT data ingestion, forecasting &amp; mesh routing | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: Smart-X, IoT data ingestion, forecasting &amp; mesh routing. A fleet of IoT sensors streams readings into a gateway every few seconds.">
   <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/smartx.html">
-  <meta property="og:title" content="Smart-X: IoT data ingestion &amp; anomaly detection">
+  <meta property="og:title" content="Smart-X: IoT data ingestion, forecasting &amp; mesh routing">
   <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/img/projects/smartx.jpg">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,23 +27,23 @@
   </header>
 
   <main id="main" class="container case">
-    <h1>Smart-X<span class="case-sub">IoT data ingestion &amp; anomaly detection</span></h1>
+    <h1>Smart-X<span class="case-sub">IoT data ingestion, forecasting &amp; mesh routing</span></h1>
     <p class="meta case-meta">2026 · Solo developer · PROG7312 (Advanced Programming)</p>
-    <div class="case-links"><a href="https://github.com/Letlhogonolo-Kgatshe/smartx-iot-gateway" target="_blank" rel="noopener" class="btn">Code</a><a href="https://youtu.be/Xduldm-qM7Y" target="_blank" rel="noopener" class="btn btn-ghost">Video demo</a></div>
+    <div class="case-links"><a href="https://github.com/Letlhogonolo-Kgatshe/smartx-iot-gateway" target="_blank" rel="noopener" class="btn">Code</a><a href="https://youtu.be/s4NIdMSn380" target="_blank" rel="noopener" class="btn btn-ghost">Final demo</a><a href="https://youtu.be/OjAtpvBV-6c" target="_blank" rel="noopener" class="btn btn-ghost">Part 2 demo</a></div>
     <ul class="tags case-tags"><li>ASP.NET Core 8 Minimal API</li><li>Blazor Server</li><li>xUnit</li><li>Docker Compose</li><li>C#</li></ul>
 
-    <div class="case-metrics"><div class="stat"><span class="stat-value">64</span><span class="stat-label">passing xUnit tests in CI</span></div><div class="stat"><span class="stat-value">2 s</span><span class="stat-label">telemetry interval from the simulated fleet</span></div><div class="stat"><span class="stat-value">4</span><span class="stat-label">projects: API, dashboard, shared, tests</span></div></div>
+    <div class="case-metrics"><div class="stat"><span class="stat-value">676</span><span class="stat-label">passing xUnit tests in CI</span></div><div class="stat"><span class="stat-value">37</span><span class="stat-label">test fixtures</span></div><div class="stat"><span class="stat-value">5</span><span class="stat-label">projects: API, dashboard, simulator, shared, tests</span></div></div>
 
     <figure class="case-figure"><img src="../img/projects/smartx.jpg" alt="Smart-X live telemetry dashboard with fleet health score and critical devices" width="800" height="500"></figure>
 
-    <section class="case-section"><h2>The problem</h2><p>A fleet of IoT sensors streams readings into a gateway every few seconds. Some packets are malformed, some devices drop offline, and some readings cross dangerous thresholds. Operators need to know, at a glance, which device needs attention first, and the system must not trust bad data.</p></section>
-    <section class="case-section"><h2>What I built</h2><ul class="points"><li>A Minimal API gateway that registers devices (with validated MAC addresses and a Facility → Zone → Room hierarchy) and ingests typed telemetry.</li><li>A severity engine that ranks every device by threshold breaches and dropouts, and suggests the next action.</li><li>A background simulator that pushes packets every 2 seconds and deliberately injects anomalies, so the system can be demonstrated realistically.</li><li>A Blazor Server dashboard with a fleet health score, filters, live readings and encrypted file attachments per device.</li></ul></section>
-    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="case-decision"><h3>Generic, typed telemetry</h3><p>A generic TelemetryPacket&lt;T&gt; carries double, int and bool readings without boxing to object, so invalid types fail at compile time.</p></div><div class="case-decision"><h3>Validation that can't loop forever</h3><p>The deployment hierarchy is validated recursively with cycle detection and a depth ceiling, and each problem is reported at the tier where it occurs.</p></div><div class="case-decision"><h3>No database where none is needed</h3><p>State is held in memory and snapshotted to JSON every 15 seconds and on shutdown, so the system survives restarts without the overhead of running a database.</p></div></div></section>
-    <section class="case-section"><h2>Results</h2><ul class="points"><li>64 xUnit tests (generics, operator overloads, recursion, custom collections, severity) run on every push.</li><li>One-command start with Docker Compose.</li><li>The live dashboard surfaces the most critical device first, with a suggested action.</li></ul></section>
+    <section class="case-section"><h2>The problem</h2><p>A fleet of IoT sensors streams readings into a gateway every few seconds. Some packets are malformed, some devices drop offline, and some readings cross dangerous thresholds. Operators need to know, at a glance, which device needs attention first, what is likely to go wrong next, and how to keep data flowing when a link fails.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>A Minimal API gateway that registers devices from a sensor catalogue (with validated MAC addresses and a Facility → Zone → Room hierarchy) and ingests typed telemetry through a pipeline with observers.</li><li>A separate simulator project that streams packets and injects anomalies on purpose, so the system can be demonstrated realistically.</li><li>Reading history kept in an AVL tree, short-term forecasting, and a suggestions engine with a proactive dispatcher that pushes actions to a live command stream.</li><li>A wireless mesh view: devices form a weighted graph, routes follow a minimum spanning tree, and the network heals itself when a node drops (the Topology page).</li><li>A Blazor Server dashboard with a fleet health score, search backed by a trie, live readings and encrypted file attachments per device.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="case-decision"><h3>Data structures chosen for the job</h3><p>An AVL tree keeps each device's history sorted for fast range queries, a trie gives instant search as you type, and a weighted graph with a minimum spanning tree decides mesh routes.</p></div><div class="case-decision"><h3>Generic, typed telemetry</h3><p>A generic TelemetryPacket&lt;T&gt; carries double, int and bool readings without boxing to object, so invalid types fail at compile time.</p></div><div class="case-decision"><h3>No database where none is needed</h3><p>State is held in memory and snapshotted to JSON on a timer and on shutdown, so the system survives restarts without the overhead of running a database.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>676 xUnit tests in 37 fixtures run on every push.</li><li>One-command start with Docker Compose.</li><li>Demo videos for Part 1, Part 2 and the Final PoE.</li></ul></section>
 
     <nav class="case-pager" aria-label="More projects">
       <a href="ascend.html" class="card"><span class="kicker">Previous project</span><strong>Ascend</strong></a>
-      <a href="safe.html" class="card case-pager-next"><span class="kicker">Next project</span><strong>SAFE</strong></a>
+      <a href="collective.html" class="card case-pager-next"><span class="kicker">Next project</span><strong>Collective</strong></a>
     </nav>
   </main>
 

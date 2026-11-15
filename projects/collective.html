@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collective: A marketplace, transport board and messaging app for students | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: Collective, A marketplace, transport board and messaging app for students. Students in Cape Town trade tutoring, lifts and favours through scattered WhatsApp groups.">
+  <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/collective.html">
+  <meta property="og:title" content="Collective: A marketplace, transport board and messaging app for students">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/img/projects/collective.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
+      <nav class="nav-links nav-links-case">
+        <a href="../index.html#projects">All projects</a>
+        <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case">
+    <h1>Collective<span class="case-sub">A marketplace, transport board and messaging app for students</span></h1>
+    <p class="meta case-meta">2026 · Solo developer · PROG7314 (Programming 3D)</p>
+    <div class="case-links"><a href="https://github.com/Letlhogonolo-Kgatshe/collective" target="_blank" rel="noopener" class="btn">Code</a><a href="https://1drv.ms/v/c/2a750ce9fd96870b/IQC-3WC2xFySRb22O44PqtBnATGgic65yr3vV3LgCW4VhbM" target="_blank" rel="noopener" class="btn btn-ghost">Video demo</a></div>
+    <ul class="tags case-tags"><li>Kotlin</li><li>Jetpack Compose</li><li>MVVM &amp; Hilt</li><li>Firebase Auth &amp; Firestore</li><li>Node.js &amp; TypeScript</li><li>GitHub Actions</li></ul>
+
+    <div class="case-metrics"><div class="stat"><span class="stat-value">237</span><span class="stat-label">unit tests: 126 Android, 111 backend</span></div><div class="stat"><span class="stat-value">3</span><span class="stat-label">languages: English, Afrikaans, Setswana</span></div><div class="stat"><span class="stat-value">6</span><span class="stat-label">Cape Town campuses in the seed data</span></div></div>
+
+    <figure class="case-figure"><img src="../img/projects/collective.jpg" alt="Three Collective screens: the services marketplace, the planner-style home and the transport map with rides" width="800" height="500"></figure>
+
+    <section class="case-section"><h2>The problem</h2><p>Students in Cape Town trade tutoring, lifts and favours through scattered WhatsApp groups. There is no way to see who is offering what, whether a driver can be trusted, or what you have signed up for this week. I wanted one app for finding services, sharing rides and talking to the people involved.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>A services marketplace where students offer, edit and book tutoring, tech help, design and errands, with ratings, reviews and an appointment-style booking flow.</li><li>A transport board laid out like Uber: a full-screen map, From/To search, routes drawn with OSRM, and one-off trips or regular carpools in a bottom sheet. Only verified drivers can offer rides.</li><li>Live, per-person messaging with edit, delete, block and report, and a planner-style home with the week's plan, points and badges.</li><li>Sign-in with email, Google (Credential Manager) or fingerprint, an optional app lock, notification switches per event and departure reminders that fire even when the app is closed.</li><li>An admin side that reviews reports and approves or revokes drivers after an in-person check, plus a small Node/TypeScript API for push notifications.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="case-decision"><h3>Offline first</h3><p>Firestore's on-device cache serves saved data with no connection and queues writes, uploading them on reconnect. The app shows an offline banner and marks messages as &quot;Sending…&quot;.</p></div><div class="case-decision"><h3>Trust before transport</h3><p>Rides can only be offered by drivers an admin has approved, and an admin can revoke that status. Security rules on Firestore enforce who can read and change each record.</p></div><div class="case-decision"><h3>No secrets in the repo</h3><p>The shared password for the sample accounts is read from an environment variable when the seed runs, so it is never committed.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>Final POE version 1.0.0, with a full walkthrough on video.</li><li>126 Android and 111 backend unit tests run by GitHub Actions on every push.</li><li>Runs in English, Afrikaans and Setswana, switchable at runtime.</li></ul></section>
+
+    <nav class="case-pager" aria-label="More projects">
+      <a href="smartx.html" class="card"><span class="kicker">Previous project</span><strong>Smart-X</strong></a>
+      <a href="hustlehub-plus.html" class="card case-pager-next"><span class="kicker">Next project</span><strong>HustleHub+</strong></a>
+    </nav>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Letlhogonolo Kgatshe</span>
+    <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
+  </footer>
+</body>
+</html>

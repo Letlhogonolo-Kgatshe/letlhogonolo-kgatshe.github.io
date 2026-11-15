@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HustleHub+: A secure freelance marketplace | Letlhogonolo Kgatshe</title>
+  <meta name="description" content="Case study: HustleHub+, A secure freelance marketplace. Freelancers and clients need a place to list gigs, book them and pay, but a marketplace that handles accounts and money is a target.">
+  <link rel="canonical" href="https://letlhogonolo-kgatshe.github.io/projects/hustlehub-plus.html">
+  <meta property="og:title" content="HustleHub+: A secure freelance marketplace">
+  <meta property="og:image" content="https://letlhogonolo-kgatshe.github.io/img/projects/hustlehub-plus.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Letlhogonolo Kgatshe</a>
+      <nav class="nav-links nav-links-case">
+        <a href="../index.html#projects">All projects</a>
+        <a href="../Letlhogonolo-Kgatshe-CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case">
+    <h1>HustleHub+<span class="case-sub">A secure freelance marketplace</span></h1>
+    <p class="meta case-meta">2026 · Team of four · INSY7314 (Application Development Security)</p>
+    <div class="case-links"><a href="https://github.com/Letlhogonolo-Kgatshe/hustlehub-plus" target="_blank" rel="noopener" class="btn">Code</a><a href="https://youtu.be/KpMu77Uqex8" target="_blank" rel="noopener" class="btn btn-ghost">Final demo</a><a href="https://youtu.be/5EMVoo-9elM" target="_blank" rel="noopener" class="btn btn-ghost">Part 2 demo</a></div>
+    <ul class="tags case-tags"><li>React &amp; Vite</li><li>Node.js &amp; Express 5</li><li>MongoDB</li><li>JWT &amp; bcrypt</li><li>Docker</li><li>Postman &amp; Newman</li><li>GitHub Actions</li></ul>
+
+    <div class="case-metrics"><div class="stat"><span class="stat-value">124</span><span class="stat-label">API requests in the Newman suite, 0 failing</span></div><div class="stat"><span class="stat-value">176</span><span class="stat-label">Newman assertions</span></div><div class="stat"><span class="stat-value">80</span><span class="stat-label">frontend tests</span></div></div>
+
+    <figure class="case-figure"><img src="../img/projects/hustlehub-plus.jpg" alt="HustleHub+ freelancer income dashboard showing total earned, estimated tax, take-home and paid bookings" width="800" height="500"></figure>
+
+    <section class="case-section"><h2>The problem</h2><p>Freelancers and clients need a place to list gigs, book them and pay, but a marketplace that handles accounts and money is a target. The brief was to build one that is secure by design, prove it with tests and scans, and show freelancers what they earn after tax.</p></section>
+    <section class="case-section"><h2>What I built</h2><ul class="points"><li>Built with Funi, Nomsa and Kwethukubonga. Clients browse and book gigs with simulated payments, freelancers manage their own gigs, and admins see all users and bookings.</li><li>My part: the freelancer income dashboard, with monthly income and income-against-tax charts and their tests.</li><li>My part: the Postman collection run with Newman in CI, covering bookings, income and tax, admin access and the security headers.</li><li>My part: security fixes for login and sessions: logins take the same time for unknown emails, passwords must be 12 or more characters and no more than 72 bytes, and logging out ends every session.</li><li>I also merged each member's final POE work into the release and wrote the dashboard and final POE sections of the README.</li></ul></section>
+    <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="case-decision"><h3>The role comes from the database</h3><p>The user is loaded on every request, so a changed role or a deleted account takes effect immediately instead of when the token expires.</p></div><div class="case-decision"><h3>Tax worked out on the server</h3><p>The SARS 2026/27 brackets live in one frozen config file. Income is read from the freelancer's own transactions inside the database query, and no amount from the request is trusted.</p></div><div class="case-decision"><h3>Security checks in the pipeline</h3><p>Every push runs ESLint, Semgrep and npm audit next to the tests, and the API sets CSP and other security headers, rate-limits requests and runs over HTTPS in Docker.</p></div></div></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>Newman: 124 requests and 176 assertions, none failing.</li><li>80 frontend tests and 37 API unit tests.</li><li>Final POE delivered with a demo video, 9 November 2026.</li></ul></section>
+
+    <nav class="case-pager" aria-label="More projects">
+      <a href="collective.html" class="card"><span class="kicker">Previous project</span><strong>Collective</strong></a>
+      <a href="safe.html" class="card case-pager-next"><span class="kicker">Next project</span><strong>SAFE</strong></a>
+    </nav>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Letlhogonolo Kgatshe</span>
+    <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
+  </footer>
+</body>
+</html>

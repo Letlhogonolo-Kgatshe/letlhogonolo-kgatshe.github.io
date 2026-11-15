@@ -79,7 +79,7 @@
     <!-- Key numbers -->
     <section class="container" aria-label="Highlights">
       <div class="stats">
-        <div class="stat"><span class="stat-value">8</span><span class="stat-label">Projects with source on GitHub</span></div>
+        <div class="stat"><span class="stat-value">10</span><span class="stat-label">Projects with source on GitHub</span></div>
         <div class="stat"><span class="stat-value">40</span><span class="stat-label">Students tutored weekly</span></div>
         <div class="stat"><span class="stat-value">19/20</span><span class="stat-label">Modules passed with distinction</span></div>
         <div class="stat"><span class="stat-value">93%</span><span class="stat-label">Cloud Development B</span></div>
@@ -98,17 +98,57 @@
           <img src="img/projects/smartx.jpg" alt="Smart-X live telemetry dashboard showing fleet health and critical devices" loading="lazy" width="799" height="506">
         </a>
         <div class="feature-body">
-          <h3>Smart-X: IoT data ingestion &amp; anomaly detection</h3>
+          <h3>Smart-X: IoT data ingestion, forecasting &amp; mesh routing</h3>
           <p class="meta">Data pipeline · 2026</p>
-          <p>A gateway that ingests live telemetry from a simulated fleet of ESP32 sensors, validates every packet and ranks anomalies by severity in real time. The dashboard shows fleet health at a glance and suggests the next action for each failing device.</p>
+          <p>A gateway that ingests live telemetry from a simulated fleet of ESP32 sensors, validates every packet and ranks anomalies by severity in real time. It forecasts readings, pushes suggested actions to operators, and routes data across a self-healing wireless mesh.</p>
           <ul class="points">
-            <li>Real-time ingestion, with dropouts and threshold breaches injected on purpose</li>
-            <li>Recursive validation of the Facility → Zone → Room hierarchy, with cycle detection</li>
-            <li>Encrypted file attachments, Docker Compose, and 64 passing xUnit tests in CI</li>
+            <li>An ingestion pipeline with observers, reading history in an AVL tree, and short-term forecasting</li>
+            <li>A wireless mesh on a weighted graph, routed by minimum spanning tree, that heals when a node drops</li>
+            <li>Encrypted file attachments, Docker Compose, and 676 passing xUnit tests in CI</li>
           </ul>
           <ul class="tags"><li>ASP.NET Core</li><li>Blazor</li><li>xUnit</li><li>Docker</li></ul>
           <div class="links"><a href="projects/smartx.html" class="card-cta">Case study</a><a href="https://github.com/Letlhogonolo-Kgatshe/smartx-iot-gateway" target="_blank" rel="noopener">Code</a>
-            <a href="https://youtu.be/Xduldm-qM7Y" target="_blank" rel="noopener">Video demo</a>
+            <a href="https://youtu.be/s4NIdMSn380" target="_blank" rel="noopener">Video demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature reverse">
+        <a class="feature-media" href="https://github.com/Letlhogonolo-Kgatshe/collective" target="_blank" rel="noopener">
+          <img src="img/projects/collective.jpg" alt="Three Collective screens: the services marketplace, the planner-style home and the transport map with rides" loading="lazy" width="800" height="500">
+        </a>
+        <div class="feature-body">
+          <h3>Collective: a student marketplace, transport board and messaging app</h3>
+          <p class="meta">Android · 2026</p>
+          <p>One app for Cape Town students to trade services, share rides and talk to each other, in place of scattered WhatsApp groups.</p>
+          <ul class="points">
+            <li>A services marketplace with bookings, ratings and reviews</li>
+            <li>A transport board with a live map, OSRM routes and rides from admin-verified drivers only</li>
+            <li>Sign-in with Google or fingerprint, offline mode, three languages, and 237 unit tests in CI</li>
+          </ul>
+          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Firebase</li><li>Node.js</li></ul>
+          <div class="links"><a href="projects/collective.html" class="card-cta">Case study</a><a href="https://github.com/Letlhogonolo-Kgatshe/collective" target="_blank" rel="noopener">Code</a>
+            <a href="https://1drv.ms/v/c/2a750ce9fd96870b/IQC-3WC2xFySRb22O44PqtBnATGgic65yr3vV3LgCW4VhbM" target="_blank" rel="noopener">Video demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <a class="feature-media" href="https://github.com/Letlhogonolo-Kgatshe/hustlehub-plus" target="_blank" rel="noopener">
+          <img src="img/projects/hustlehub-plus.jpg" alt="HustleHub+ freelancer income dashboard showing total earned, estimated tax, take-home and paid bookings" loading="lazy" width="800" height="500">
+        </a>
+        <div class="feature-body">
+          <h3>HustleHub+: a secure freelance marketplace</h3>
+          <p class="meta">Team project · Application security · 2026</p>
+          <p>A gig marketplace built by a team of four to be secure by design, with the tests and scans to prove it. Freelancers see what they earned and the tax the server estimates for the 2026/27 year.</p>
+          <ul class="points">
+            <li>I built the income dashboard and its charts, and the Newman API suite: 124 requests, 176 assertions, none failing</li>
+            <li>I fixed login and session security: logins that take the same time for unknown emails, a stricter password policy, and logout that ends every session</li>
+            <li>JWT, role and ownership checks, rate limiting, CSP and HTTPS, with ESLint, Semgrep and npm audit in CI</li>
+          </ul>
+          <ul class="tags"><li>React</li><li>Express</li><li>MongoDB</li><li>Docker</li><li>Security</li></ul>
+          <div class="links"><a href="projects/hustlehub-plus.html" class="card-cta">Case study</a><a href="https://github.com/Letlhogonolo-Kgatshe/hustlehub-plus" target="_blank" rel="noopener">Code</a>
+            <a href="https://youtu.be/KpMu77Uqex8" target="_blank" rel="noopener">Video demo</a>
           </div>
         </div>
       </article>
