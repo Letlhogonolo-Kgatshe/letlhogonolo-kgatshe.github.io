@@ -85,7 +85,7 @@ const PROJECTS = [
             ['Privacy by default', 'Budgets, saved terms and game progress live only in the visitor\'s browser, never on a server.'],
             ['Pages, not one endless scroll', 'The single page had grown past 15,000px. It is now six focused pages with a shared layout, and the glossary loads 24 terms at a time.'],
         ],
-        results: ['Fixed the live deploy (Pages was publishing the repo root instead of src/), so the site loads at its public URL.', 'Fixed a broken mobile menu and the game crashing on its final day.', 'Content lives in data files, so new terms and resources can be added without touching layout code.'],
+        results: ['Redesigned in 2026 with a Quiet, Showcase and Midnight style switcher; the choice is saved in the browser and shared with my other sites.', 'Fixed the live deploy (Pages was publishing the repo root instead of src/), so the site loads at its public URL.', 'Fixed a broken mobile menu and the game crashing on its final day.', 'Content lives in data files, so new terms and resources can be added without touching layout code.'],
     },
     {
         slug: 'entice-feed', title: 'Entice Feed', subtitle: 'Agri-SaaS website with real El Niño forecasting', year: '2025–2026', role: 'Freelance · design, development & data modelling',
@@ -105,7 +105,28 @@ const PROJECTS = [
             ['Honest by design', 'A methodology panel states sources and limitations, and demo auction and tracking rows are labelled as sample data.'],
             ['No server to maintain', 'A scheduled GitHub Action rebuilds the data file, so the site stays static, fast and free to host.'],
         ],
-        results: ['With a very strong El Niño developing (ONI +2.16 in Aug 2026), the model projects the 2027 harvest at ~16% below trend.', 'The pipeline was verified end to end on GitHub, where it fetched, fitted and committed fresh data.', 'Fixed broken icons (an invalid Font Awesome kit), dead navigation links and forms that sent nothing.'],
+        results: ['With a very strong El Niño developing (ONI +2.46 in September 2026), the model projects the 2027 harvest at about 19% below trend.', 'Redesigned in 2026 with a Quiet, Showcase and Midnight style switcher; the choice is saved in the browser and shared with my other sites.', 'The pipeline was verified end to end on GitHub, where it fetched, fitted and committed fresh data.', 'Fixed broken icons (an invalid Font Awesome kit), dead navigation links and forms that sent nothing.'],
+    },
+    {
+        slug: 'salimboji', title: 'Salimboji Consultancy', subtitle: 'Online doctor consultations and medication delivery', year: '2025–2026', role: 'Freelance · design and development',
+        stack: ['HTML', 'Tailwind CSS', 'JavaScript', 'GitHub Pages'],
+        links: [['Live site', 'https://letlhogonolo-kgatshe.github.io/salimboji-consultancy-website/'], ['Code', GH + 'salimboji-consultancy-website']],
+        img: 'salimboji.jpg', imgAlt: 'Salimboji Consultancy home page', shots: 'salimboji',
+        metrics: [['3', 'steps from landing to a booking request'], ['5', 'pages, each showing the emergency numbers'], ['0', 'health records stored on a server']],
+        problem: 'A small practice offering online consultations was running a US template site with placeholder reviews and New York contact details. Patients need to see quickly how to book, what can be treated online, and when to call an ambulance instead.',
+        built: [
+            'Five pages: home, services, a three-step booking flow, medication orders, and contact with frequently asked questions.',
+            'A booking flow (service and call type, then day and time, then details) with inline validation, a review screen and an add-to-calendar file.',
+            'Booking and order requests go to the practice through WhatsApp or email, so no health data is stored on a server.',
+            'The emergency numbers (10177 and 112) on every page, and a sticky Call, WhatsApp and Book bar on phones.',
+            'An "open now" badge and opening hours driven by one configuration file.',
+        ],
+        decisions: [
+            ['No server-side health data', 'The site is static. Requests are sent through WhatsApp or email, so nothing sensitive sits in a database, in line with POPIA.'],
+            ['Honest about online care', 'Every page shows the emergency numbers, and the services page lists the warning signs that need in-person care.'],
+            ['No invented reviews', 'The template testimonials were removed. Real, consented patient reviews can be added later.'],
+        ],
+        results: ['Live on GitHub Pages. The practice\'s real phone, WhatsApp and address are still to be added, in one configuration file.', 'Redesigned in 2026 with a Quiet, Showcase and Midnight style switcher; the choice is saved in the browser and shared with my other sites.'],
     },
     {
         slug: 'glms', title: 'GLMS', subtitle: 'Logistics contract management', year: '2026', role: 'Solo developer · PROG7311 (Enterprise Application Development)',
@@ -200,11 +221,11 @@ const PROJECTS = [
             ['Progress stays private', 'Everything is saved in the browser. Sync across devices is opt-in and uses a secret GitHub gist, with a token that only has the gist permission, so there is no server and no account to create.'],
             ['Content separate from code', 'Events live in events.json, so they can be refreshed weekly without touching the app.'],
         ],
-        results: ['Live on GitHub Pages and in daily use since 29 October 2026.', 'Season 1 runs from 26 October to 20 December 2026.', 'The data path feeds this portfolio: its milestones include the projects and case studies shown here.'],
+        results: ['Redesigned in 2026 with a Quiet, Showcase and Midnight style switcher; it is chosen in Settings, saved in the browser and shared with my other sites.', 'Live on GitHub Pages and in daily use since 29 October 2026.', 'Season 1 runs from 26 October to 20 December 2026.', 'The data path feeds this portfolio: its milestones include the projects and case studies shown here.'],
     },
 ];
 
-const STACKS = {"safe":{"name":"SAFE","url":"https://letlhogonolo-kgatshe.github.io/SAFE/","what":"home page","order":["showcase","quiet","midnight"]},"ascend":{"name":"Ascend","url":"https://letlhogonolo-kgatshe.github.io/ascend/","what":"Today view","order":["midnight","quiet","showcase"]},"entice-feed":{"name":"Entice Feed","url":"https://letlhogonolo-kgatshe.github.io/entice-feed-website/","what":"home page with the live El Niño watch","order":["quiet","showcase","midnight"]}};
+const STACKS = {"safe":{"name":"SAFE","url":"https://letlhogonolo-kgatshe.github.io/SAFE/","what":"home page","order":["showcase","quiet","midnight"]},"salimboji":{"name":"Salimboji Consultancy","url":"https://letlhogonolo-kgatshe.github.io/salimboji-consultancy-website/","what":"home page","order":["quiet","showcase","midnight"]},"ascend":{"name":"Ascend","url":"https://letlhogonolo-kgatshe.github.io/ascend/","what":"Today view","order":["midnight","quiet","showcase"]},"entice-feed":{"name":"Entice Feed","url":"https://letlhogonolo-kgatshe.github.io/entice-feed-website/","what":"home page with the live El Niño watch","order":["quiet","showcase","midnight"]}};
 const cap = (s) => s[0].toUpperCase() + s.slice(1);
 const BACK = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>';
 const ARROW = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
@@ -232,7 +253,7 @@ const page = (p, i) => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=7fa81257">
+  <link rel="stylesheet" href="../styles.css?v=0d69efad">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -276,8 +297,8 @@ const page = (p, i) => {
     <span>© ${new Date().getFullYear()} Letlhogonolo Kgatshe</span>
     <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
   </footer>
-  <script src="../style-switch.js?v=211f6d72"></script>
-  <script src="../shot-stack.js?v=f04e2563"></script>
+  <script src="../style-switch.js?v=fa3f4b58"></script>
+  <script src="../shot-stack.js?v=3188a817"></script>
 </body>
 </html>
 `;

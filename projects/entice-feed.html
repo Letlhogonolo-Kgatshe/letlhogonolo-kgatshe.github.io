@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=7fa81257">
+  <link rel="stylesheet" href="../styles.css?v=0d69efad">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -46,11 +46,11 @@
     <section class="case-section"><h2>The problem</h2><p>Entice Feed is building a platform that connects every player in South Africa's agricultural value chain. Many agritech sites either pitch investors or talk over farmers. The client needed a site that explains the platform plainly, and proves its value with real insight rather than stock charts.</p></section>
     <section class="case-section"><h2>What I built</h2><ul class="points"><li>A five-page site (Home, Platform, Live data, Plans, Contact) with a &quot;who it's for&quot; role picker that opens each stakeholder's tools directly.</li><li>A Node.js data pipeline, run weekly by GitHub Actions, that pulls NOAA's El Niño index, World Bank yields and maize prices, ECB exchange rates and ECMWF seasonal rainfall.</li><li>Models fitted from the data on every run: an El Niño outlook, a harvest outlook (yield vs El Niño since 1980) and a rand maize price forecast with 80% ranges.</li><li>Live 7-day weather and soil moisture per growing region, fetched directly in the browser.</li></ul></section>
     <section class="case-section"><h2>Key decisions</h2><div class="case-decisions"><div class="case-decision"><h3>Learn effects, don't assume them</h3><p>Every coefficient is fitted from the data. The model found El Niño cuts SA yields by ~9% per point, but historically lowers world maize prices. The page explains this rather than hiding it.</p></div><div class="case-decision"><h3>Honest by design</h3><p>A methodology panel states sources and limitations, and demo auction and tracking rows are labelled as sample data.</p></div><div class="case-decision"><h3>No server to maintain</h3><p>A scheduled GitHub Action rebuilds the data file, so the site stays static, fast and free to host.</p></div></div></section>
-    <section class="case-section"><h2>Results</h2><ul class="points"><li>With a very strong El Niño developing (ONI +2.16 in Aug 2026), the model projects the 2027 harvest at ~16% below trend.</li><li>The pipeline was verified end to end on GitHub, where it fetched, fitted and committed fresh data.</li><li>Fixed broken icons (an invalid Font Awesome kit), dead navigation links and forms that sent nothing.</li></ul></section>
+    <section class="case-section"><h2>Results</h2><ul class="points"><li>With a very strong El Niño developing (ONI +2.46 in September 2026), the model projects the 2027 harvest at about 19% below trend.</li><li>Redesigned in 2026 with a Quiet, Showcase and Midnight style switcher; the choice is saved in the browser and shared with my other sites.</li><li>The pipeline was verified end to end on GitHub, where it fetched, fitted and committed fresh data.</li><li>Fixed broken icons (an invalid Font Awesome kit), dead navigation links and forms that sent nothing.</li></ul></section>
 
     <nav class="case-pager" aria-label="More projects">
       <a href="safe.html" class="card"><span class="kicker">Previous project</span><strong>SAFE</strong></a>
-      <a href="glms.html" class="card case-pager-next"><span class="kicker">Next project</span><strong>GLMS</strong></a>
+      <a href="salimboji.html" class="card case-pager-next"><span class="kicker">Next project</span><strong>Salimboji Consultancy</strong></a>
     </nav>
   </main>
 
@@ -58,7 +58,7 @@
     <span>© 2026 Letlhogonolo Kgatshe</span>
     <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
   </footer>
-  <script src="../style-switch.js?v=211f6d72"></script>
-  <script src="../shot-stack.js?v=f04e2563"></script>
+  <script src="../style-switch.js?v=fa3f4b58"></script>
+  <script src="../shot-stack.js?v=3188a817"></script>
 </body>
 </html>
