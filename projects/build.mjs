@@ -65,7 +65,7 @@ const PROJECTS = [
             ['Tax worked out on the server', 'The SARS 2026/27 brackets live in one frozen config file. Income is read from the freelancer\'s own transactions inside the database query, and no amount from the request is trusted.'],
             ['Security checks in the pipeline', 'Every push runs ESLint, Semgrep and npm audit next to the tests, and the API sets CSP and other security headers, rate-limits requests and runs over HTTPS in Docker.'],
         ],
-        results: ['Newman: 124 requests and 176 assertions, none failing.', '80 frontend tests and 37 API unit tests.', 'Final POE delivered with a demo video, 9 November 2026.'],
+        results: ['Newman: 124 requests and 176 assertions, none failing.', '80 frontend tests and 50 API unit tests.', 'Final POE delivered with a demo video, 9 November 2026.'],
     },
     {
         slug: 'safe', title: 'SAFE', subtitle: 'South African Financial Education', year: '2025–2026', role: 'Solo entry (Team Arctic) · SA Intervarsity Hackathon 2025',
