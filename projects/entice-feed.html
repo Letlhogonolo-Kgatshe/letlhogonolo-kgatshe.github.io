@@ -41,7 +41,7 @@
 
     <div class="case-metrics"><div class="stat"><span class="stat-value">−8.8%</span><span class="stat-label">SA cereal yield per +1 El Niño index (fitted)</span></div><div class="stat"><span class="stat-value">5</span><span class="stat-label">free public data sources</span></div><div class="stat"><span class="stat-value">Weekly</span><span class="stat-label">automatic data refresh</span></div></div>
 
-    <figure class="case-figure"><img src="../img/projects/entice-feed.jpg" alt="Entice Feed homepage with the live El Niño watch" width="800" height="500"></figure>
+    <div class="case-stack shot-stack" data-stack><a class="stack-link" href="https://letlhogonolo-kgatshe.github.io/entice-feed-website/" target="_blank" rel="noopener"><img class="stack-card" data-pos="0" data-label="Quiet" src="../img/projects/entice-feed-quiet.jpg" alt="Entice Feed home page with the live El Niño watch in the Quiet style" width="800" height="500"><img class="stack-card" data-pos="1" data-label="Showcase" src="../img/projects/entice-feed-showcase.jpg" alt="Entice Feed home page with the live El Niño watch in the Showcase style" width="800" height="500"><img class="stack-card" data-pos="2" data-label="Midnight" src="../img/projects/entice-feed-midnight.jpg" alt="Entice Feed home page with the live El Niño watch in the Midnight style" width="800" height="500"></a><div class="stack-bar"><span class="stack-label" aria-live="polite">Quiet · 1 of 3</span><button type="button" class="stack-next" aria-label="Show Entice Feed in the next style"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div>
 
     <section class="case-section"><h2>The problem</h2><p>Entice Feed is building a platform that connects every player in South Africa's agricultural value chain. Many agritech sites either pitch investors or talk over farmers. The client needed a site that explains the platform plainly, and proves its value with real insight rather than stock charts.</p></section>
     <section class="case-section"><h2>What I built</h2><ul class="points"><li>A five-page site (Home, Platform, Live data, Plans, Contact) with a &quot;who it's for&quot; role picker that opens each stakeholder's tools directly.</li><li>A Node.js data pipeline, run weekly by GitHub Actions, that pulls NOAA's El Niño index, World Bank yields and maize prices, ECB exchange rates and ECMWF seasonal rainfall.</li><li>Models fitted from the data on every run: an El Niño outlook, a harvest outlook (yield vs El Niño since 1980) and a rand maize price forecast with 80% ranges.</li><li>Live 7-day weather and soil moisture per growing region, fetched directly in the browser.</li></ul></section>
@@ -59,5 +59,6 @@
     <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
   </footer>
   <script src="../style-switch.js"></script>
+  <script src="../shot-stack.js"></script>
 </body>
 </html>

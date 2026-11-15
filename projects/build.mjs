@@ -71,7 +71,7 @@ const PROJECTS = [
         slug: 'safe', title: 'SAFE', subtitle: 'South African Financial Education', year: '2025–2026', role: 'Solo entry (Team Arctic) · SA Intervarsity Hackathon 2025',
         stack: ['JavaScript', 'Tailwind CSS', 'Chart.js', 'GitHub Pages & Actions'],
         links: [['Live site', 'https://letlhogonolo-kgatshe.github.io/SAFE/'], ['Code', GH + 'SAFE']],
-        img: 'safe.jpg', imgAlt: 'SAFE homepage: Money conversations, made simple',
+        img: 'safe.jpg', imgAlt: 'SAFE home page', shots: 'safe',
         metrics: [['88', 'glossary terms with rand examples'], ['8', 'money calculators'], ['47', 'curated SA & global resources']],
         problem: 'When I started learning about money, the useful resources were scattered across dozens of sites and channels, full of jargon and often written for other countries. Beginners in South Africa need one trustworthy place that explains the basics in plain language, using local rules and rand amounts.',
         built: [
@@ -91,7 +91,7 @@ const PROJECTS = [
         slug: 'entice-feed', title: 'Entice Feed', subtitle: 'Agri-SaaS website with real El Niño forecasting', year: '2025–2026', role: 'Freelance · design, development & data modelling',
         stack: ['JavaScript', 'Tailwind CSS', 'Chart.js', 'Node.js', 'GitHub Actions', 'Open-Meteo · NOAA · World Bank APIs'],
         links: [['Live site', 'https://letlhogonolo-kgatshe.github.io/entice-feed-website/'], ['Code', GH + 'entice-feed-website']],
-        img: 'entice-feed.jpg', imgAlt: 'Entice Feed homepage with the live El Niño watch',
+        img: 'entice-feed.jpg', imgAlt: 'Entice Feed home page with the live El Niño watch', shots: 'entice-feed',
         metrics: [['−8.8%', 'SA cereal yield per +1 El Niño index (fitted)'], ['5', 'free public data sources'], ['Weekly', 'automatic data refresh']],
         problem: 'Entice Feed is building a platform that connects every player in South Africa\'s agricultural value chain. Many agritech sites either pitch investors or talk over farmers. The client needed a site that explains the platform plainly, and proves its value with real insight rather than stock charts.',
         built: [
@@ -186,7 +186,7 @@ const PROJECTS = [
         slug: 'ascend', title: 'Ascend', subtitle: 'A personal curriculum app', year: '2026', role: 'Solo · personal tool I use every day',
         stack: ['JavaScript', 'HTML & CSS', 'GitHub Gist API', 'Web app manifest', 'GitHub Pages'],
         links: [['Live app', 'https://letlhogonolo-kgatshe.github.io/ascend/'], ['Code', GH + 'ascend']],
-        img: 'ascend.jpg', imgAlt: "Ascend's Today view with the day's sessions, daily minimums and weekly targets",
+        img: 'ascend.jpg', imgAlt: "Ascend's Today view with the day's sessions, daily minimums and weekly targets", shots: 'ascend',
         metrics: [['8 weeks', 'per learning season'], ['37', 'milestones on the data analyst path'], ['1 file', 'no framework or build step']],
         problem: 'I was learning data analytics, photography and reading from scattered notes and bookmarks, with no weekly plan and no way to see whether I was keeping up. I wanted one place that tells me what to do today, tracks what I actually did, and works on both my laptop and my phone.',
         built: [
@@ -204,6 +204,14 @@ const PROJECTS = [
     },
 ];
 
+const STACKS = {"safe":{"name":"SAFE","url":"https://letlhogonolo-kgatshe.github.io/SAFE/","what":"home page","order":["showcase","quiet","midnight"]},"ascend":{"name":"Ascend","url":"https://letlhogonolo-kgatshe.github.io/ascend/","what":"Today view","order":["midnight","quiet","showcase"]},"entice-feed":{"name":"Entice Feed","url":"https://letlhogonolo-kgatshe.github.io/entice-feed-website/","what":"home page with the live El Niño watch","order":["quiet","showcase","midnight"]}};
+const cap = (s) => s[0].toUpperCase() + s.slice(1);
+const ARROW = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const stackHtml = (slug) => {
+    const s = STACKS[slug];
+    const cards = s.order.map((st, i) => `<img class="stack-card" data-pos="${i}" data-label="${cap(st)}" src="../img/projects/${slug}-${st}.jpg" alt="${s.name} ${s.what} in the ${cap(st)} style" width="800" height="500">`).join('');
+    return `<div class="case-stack shot-stack" data-stack><a class="stack-link" href="${s.url}" target="_blank" rel="noopener">${cards}</a><div class="stack-bar"><span class="stack-label" aria-live="polite">${cap(s.order[0])} · 1 of 3</span><button type="button" class="stack-next" aria-label="Show ${s.name} in the next style">${ARROW}</button></div></div>`;
+};
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const page = (p, i) => {
     const prev = PROJECTS[(i - 1 + PROJECTS.length) % PROJECTS.length], next = PROJECTS[(i + 1) % PROJECTS.length];
@@ -250,7 +258,7 @@ const page = (p, i) => {
 
     <div class="case-metrics">${p.metrics.map(([v, l]) => `<div class="stat"><span class="stat-value">${esc(v)}</span><span class="stat-label">${esc(l)}</span></div>`).join('')}</div>
 
-    ${p.img ? `<figure class="case-figure${p.imgContain ? ' case-figure-contain' : ''}"><img src="../img/projects/${p.img}" alt="${esc(p.imgAlt)}" width="800" height="500"></figure>` : ''}
+    ${p.shots ? stackHtml(p.shots) : p.img ? `<figure class="case-figure${p.imgContain ? ' case-figure-contain' : ''}"><img src="../img/projects/${p.img}" alt="${esc(p.imgAlt)}" width="800" height="500"></figure>` : ''}
 
     <section class="case-section"><h2>The problem</h2><p>${esc(p.problem)}</p></section>
     <section class="case-section"><h2>What I built</h2><ul class="points">${p.built.map((b) => `<li>${esc(b)}</li>`).join('')}</ul></section>
@@ -268,6 +276,7 @@ const page = (p, i) => {
     <a href="mailto:Tlhogikgatshe@gmail.com">Tlhogikgatshe@gmail.com</a>
   </footer>
   <script src="../style-switch.js"></script>
+  <script src="../shot-stack.js"></script>
 </body>
 </html>
 `;
