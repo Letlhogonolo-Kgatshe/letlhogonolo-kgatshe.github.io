@@ -5,7 +5,7 @@ import { writeFileSync } from 'node:fs';
 const GH = 'https://github.com/Letlhogonolo-Kgatshe/';
 const PROJECTS = [
     {
-        slug: 'smartx', title: 'Smart-X', subtitle: 'IoT data ingestion, forecasting & mesh routing', year: '2026', role: 'Solo developer · PROG7312 (Advanced Programming)',
+        slug: 'smartx', title: 'Smart-X', subtitle: 'IoT data ingestion, forecasting & mesh routing', year: '2026', role: 'Solo developer · PROG7312 (Advanced Programming, 93%)',
         stack: ['ASP.NET Core 8 Minimal API', 'Blazor Server', 'xUnit', 'Docker Compose', 'C#'],
         links: [['Code', GH + 'smartx-iot-gateway'], ['Final demo', 'https://youtu.be/s4NIdMSn380'], ['Part 2 demo', 'https://youtu.be/OjAtpvBV-6c']],
         img: 'smartx.jpg', imgAlt: 'Smart-X live telemetry dashboard with fleet health score and critical devices',
@@ -26,7 +26,7 @@ const PROJECTS = [
         results: ['676 xUnit tests in 37 fixtures run on every push.', 'One-command start with Docker Compose.', 'Demo videos for Part 1, Part 2 and the Final PoE.'],
     },
     {
-        slug: 'collective', title: 'Collective', subtitle: 'A marketplace, transport board and messaging app for students', year: '2026', role: 'Solo developer · PROG7314 (Programming 3D)',
+        slug: 'collective', title: 'Collective', subtitle: 'A marketplace, transport board and messaging app for students', year: '2026', role: 'Solo developer · PROG7314 (Programming 3D, 86%)',
         stack: ['Kotlin', 'Jetpack Compose', 'MVVM & Hilt', 'Firebase Auth & Firestore', 'Node.js & TypeScript', 'GitHub Actions'],
         links: [['Code', GH + 'collective'], ['Video demo', 'https://1drv.ms/v/c/2a750ce9fd96870b/IQC-3WC2xFySRb22O44PqtBnATGgic65yr3vV3LgCW4VhbM']],
         img: 'collective.jpg', imgAlt: 'Three Collective screens: the services marketplace, the planner-style home and the transport map with rides',
@@ -47,7 +47,7 @@ const PROJECTS = [
         results: ['Final POE version 1.0.0, with a full walkthrough on video.', '126 Android and 111 backend unit tests run by GitHub Actions on every push.', 'Runs in English, Afrikaans and Setswana, switchable at runtime.'],
     },
     {
-        slug: 'hustlehub-plus', title: 'HustleHub+', subtitle: 'A secure freelance marketplace', year: '2026', role: 'Team of four · INSY7314 (Application Development Security)',
+        slug: 'hustlehub-plus', title: 'HustleHub+', subtitle: 'A secure freelance marketplace', year: '2026', role: 'Team of four · INSY7314 (Application Development Security, 90%)',
         stack: ['React & Vite', 'Node.js & Express 5', 'MongoDB', 'JWT & bcrypt', 'Docker', 'Postman & Newman', 'GitHub Actions'],
         links: [['Code', GH + 'hustlehub-plus'], ['Final demo', 'https://youtu.be/KpMu77Uqex8'], ['Part 2 demo', 'https://youtu.be/5EMVoo-9elM']],
         img: 'hustlehub-plus.jpg', imgAlt: 'HustleHub+ freelancer income dashboard showing total earned, estimated tax, take-home and paid bookings',

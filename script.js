@@ -38,6 +38,10 @@ const modules = [
   { name: "Introduction to Research for ICT", year: 2026, mark: 65 },
   { name: "Programming 3A", year: 2026, mark: 83 },
   { name: "Programming 3C", year: 2026, mark: 89 },
+  { name: "Information Systems 3E", year: 2026, mark: 75 },
+  { name: "Programming 3D", year: 2026, mark: 86 },
+  { name: "Information Systems 3D", year: 2026, mark: 90 },
+  { name: "Programming 3B", year: 2026, mark: 93 },
 ];
 
 // Yearly summary cards
@@ -47,7 +51,7 @@ document.getElementById("year-avgs").innerHTML = years
     const rows = modules.filter((m) => m.year === y);
     const avg = rows.reduce((s, m) => s + m.mark, 0) / rows.length;
     const dist = rows.filter((m) => m.mark >= 75).length;
-    const label = y === 2026 ? `${y} (first semester)` : y;
+    const label = y;
     return `
       <div class="year">
         <div class="year-top"><span class="year-label">${label}</span><span class="year-avg">${avg.toFixed(1)}%</span></div>
@@ -76,7 +80,7 @@ moduleToggle.addEventListener("click", () => {
   const show = chart.hidden;
   chart.hidden = !show;
   moduleToggle.setAttribute("aria-expanded", show);
-  moduleToggle.textContent = show ? "Hide module list" : "Show all 20 modules";
+  moduleToggle.textContent = show ? "Hide module list" : "Show all 24 modules";
 });
 
 // Reveal sections on scroll
